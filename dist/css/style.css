@@ -1240,14 +1240,14 @@ ul.sub-menu li.menu-item:first-child {
 
 /* ------------- Form Section ----------------------------------------------------------------------------------------------------------- */
 /* line 455, src/sass/style.scss */
-#wpforms-53 {
+#wpforms-53, #wpforms-38 {
   width: 40vw;
   background: #EAF3F3;
   padding: var(--vertical) var(--horizontal);
 }
 
 /* line 460, src/sass/style.scss */
-#wpforms-53 input {
+#wpforms-53 input, #wpforms-38 input {
   border-color: #cae0e0 !important;
   background-color: white !important;
   border-radius: 3px !important;
