@@ -1,0 +1,38 @@
+@import "breakpoints";
+
+:root {
+    --site-width:90vw;
+    
+    --horizontal-s:2vw;
+    --horizontal:3vw;
+    --horizontal-l:6vw;
+    --horizontal-xl:10vw;
+    
+    --vertical-s:1vw;
+    --vertical:2vw;
+    --vertical-l:4vw;
+    --vertical-xl:8vw;
+
+    @include phone {
+        --horizontal-s:2vw;
+        --horizontal:3vw;
+        --horizontal-l:6vw;
+        --horizontal-xl:10vw;
+        
+        --vertical-s:5vw;
+        --vertical:10vw;
+        --vertical-l:15vw;
+        --vertical-xl:20vw;
+    }
+
+    @include tablet { 
+        --horizontal:6vw;
+        
+        --vertical-s:4vw;
+        --vertical:8vw;
+        --vertical-l:10vw;
+        --vertical-xl:15vw;
+    }
+
+}
+

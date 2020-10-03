@@ -1,0 +1,1304 @@
+/*! Hashmuseum v1.0.0 | (c) 2020 Sjoerd Koelewijn | MIT License |  */
+/* line 3, src/sass/reset.scss */
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Box sizing rules */
+/* line 9, src/sass/reset.scss */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* line 15, src/sass/reset.scss */
+*, *:focus, *:hover {
+  outline: none;
+}
+
+/* Remove default padding */
+/* line 20, src/sass/reset.scss */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+/* line 26, src/sass/reset.scss */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+/* line 44, src/sass/reset.scss */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+/* line 52, src/sass/reset.scss */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+/* line 58, src/sass/reset.scss */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+/* line 63, src/sass/reset.scss */
+img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Inherit fonts for inputs and buttons */
+/* line 69, src/sass/reset.scss */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* line 76, src/sass/reset.scss */
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+/* line 81, src/sass/reset.scss */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 86, src/sass/reset.scss */
+li {
+  margin: 0;
+  list-style-type: none;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  /* line 93, src/sass/reset.scss */
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* line 14, src/sass/variables/colors.scss */
+::-moz-selection {
+  color: #ffffff;
+  background: #27AE60;
+}
+::selection {
+  color: #ffffff;
+  background: #27AE60;
+}
+
+/* line 19, src/sass/variables/colors.scss */
+html {
+  color: #0E131F;
+  background: #F6F6F6;
+}
+
+/* line 24, src/sass/variables/colors.scss */
+a {
+  color: #0E131F;
+  -webkit-transition: color .5s ease;
+  transition: color .5s ease;
+}
+
+/* line 28, src/sass/variables/colors.scss */
+a:hover {
+  -webkit-transition: color .5s ease;
+  transition: color .5s ease;
+  color: #27AE60;
+}
+
+/* line 33, src/sass/variables/colors.scss */
+a:visited {
+  color: #0E131F;
+}
+
+/* line 37, src/sass/variables/colors.scss */
+a:visited:hover {
+  color: #27AE60;
+}
+
+/* line 45, src/sass/variables/colors.scss */
+h1 strong, h2 strong, h3 strong, h4 strong {
+  color: #27AE60;
+}
+
+/* line 50, src/sass/variables/colors.scss */
+button, .button, .wp-block-button__link {
+  background: #27AE60;
+  color: #ffffff;
+  -webkit-transition: background-color .5s ease, color .5s ease;
+  transition: background-color .5s ease, color .5s ease;
+}
+
+/* line 55, src/sass/variables/colors.scss */
+button:hover, .button:hover, .wp-block-button__link:hover {
+  -webkit-transition: background-color .5s ease, color .5s ease;
+  transition: background-color .5s ease, color .5s ease;
+  background: #0E131F;
+  color: #ffffff;
+}
+
+/* line 61, src/sass/variables/colors.scss */
+button:visited, .button:visited, .wp-block-button__link:visited {
+  color: #ffffff;
+}
+
+/* line 65, src/sass/variables/colors.scss */
+button:visited:hover, .button:visited:hover, .wp-block-button__link:visited:hover {
+  color: #ffffff;
+}
+
+/* line 72, src/sass/variables/colors.scss */
+.wp-block-button.is-style-outline .wp-block-button__link {
+  background: none;
+  border: 2px solid #0E131F;
+  color: #0E131F;
+  -webkit-transition: background-color .5s ease, color .5s ease;
+  transition: background-color .5s ease, color .5s ease;
+}
+
+/* line 78, src/sass/variables/colors.scss */
+.wp-block-button.is-style-outline .wp-block-button__link:hover {
+  -webkit-transition: background-color .5s ease, color .5s ease;
+  transition: background-color .5s ease, color .5s ease;
+  background: #0E131F;
+  color: #ffffff;
+}
+
+/* line 14, src/sass/variables/colors.scss */
+::-moz-selection {
+  color: #ffffff;
+  background: #27AE60;
+}
+::selection {
+  color: #ffffff;
+  background: #27AE60;
+}
+
+/* line 19, src/sass/variables/colors.scss */
+html {
+  color: #0E131F;
+  background: #F6F6F6;
+}
+
+/* line 24, src/sass/variables/colors.scss */
+a {
+  color: #0E131F;
+  -webkit-transition: color .5s ease;
+  transition: color .5s ease;
+}
+
+/* line 28, src/sass/variables/colors.scss */
+a:hover {
+  -webkit-transition: color .5s ease;
+  transition: color .5s ease;
+  color: #27AE60;
+}
+
+/* line 33, src/sass/variables/colors.scss */
+a:visited {
+  color: #0E131F;
+}
+
+/* line 37, src/sass/variables/colors.scss */
+a:visited:hover {
+  color: #27AE60;
+}
+
+/* line 45, src/sass/variables/colors.scss */
+h1 strong, h2 strong, h3 strong, h4 strong {
+  color: #27AE60;
+}
+
+/* line 50, src/sass/variables/colors.scss */
+button, .button, .wp-block-button__link {
+  background: #27AE60;
+  color: #ffffff;
+  -webkit-transition: background-color .5s ease, color .5s ease;
+  transition: background-color .5s ease, color .5s ease;
+}
+
+/* line 55, src/sass/variables/colors.scss */
+button:hover, .button:hover, .wp-block-button__link:hover {
+  -webkit-transition: background-color .5s ease, color .5s ease;
+  transition: background-color .5s ease, color .5s ease;
+  background: #0E131F;
+  color: #ffffff;
+}
+
+/* line 61, src/sass/variables/colors.scss */
+button:visited, .button:visited, .wp-block-button__link:visited {
+  color: #ffffff;
+}
+
+/* line 65, src/sass/variables/colors.scss */
+button:visited:hover, .button:visited:hover, .wp-block-button__link:visited:hover {
+  color: #ffffff;
+}
+
+/* line 72, src/sass/variables/colors.scss */
+.wp-block-button.is-style-outline .wp-block-button__link {
+  background: none;
+  border: 2px solid #0E131F;
+  color: #0E131F;
+  -webkit-transition: background-color .5s ease, color .5s ease;
+  transition: background-color .5s ease, color .5s ease;
+}
+
+/* line 78, src/sass/variables/colors.scss */
+.wp-block-button.is-style-outline .wp-block-button__link:hover {
+  -webkit-transition: background-color .5s ease, color .5s ease;
+  transition: background-color .5s ease, color .5s ease;
+  background: #0E131F;
+  color: #ffffff;
+}
+
+/* line 9, src/sass/variables/typography.scss */
+:root {
+  --x-large-title:3.5vw;
+  --large-title:3vw;
+  --medium-title:2.5vw;
+  --small-title:2vw;
+  --x-large-subtitle:2vw;
+  --large-subtitle:1.75vw;
+  --medium-subtitle:1.5vw;
+  --small-subtitle:1.1vw;
+  --x-large-p:1.6rem;
+  --large-p:1.3rem;
+  --medium-p:1rem;
+  --small-p:.8rem;
+  --medium-btn:1.1rem;
+  --small-btn:0.9rem;
+}
+
+@media (min-width: 280px) and (max-width: 799px) {
+  /* line 9, src/sass/variables/typography.scss */
+  :root {
+    --x-large-title:13vw;
+    --large-title:10vw;
+    --medium-title:8vw;
+    --small-title:7vw;
+    --large-subtitle:8vw;
+    --medium-subtitle:7vw;
+    --small-subtitle:6vw;
+    --large-p:1.3rem;
+    --small-p:.85rem;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) and (orientation: portrait) {
+  /* line 9, src/sass/variables/typography.scss */
+  :root {
+    --x-large-title:11vw;
+    --large-title:8vw;
+    --medium-title:6vw;
+    --small-title:5vw;
+    --large-subtitle:5vw;
+    --medium-subtitle:4vw;
+    --small-subtitle:3vw;
+    --medium-btn:1.2rem;
+    --small-btn:1rem;
+    --large-p:1.6rem;
+    --medium-p:1.4rem;
+    --small-p:1.2rem;
+  }
+}
+
+/* line 68, src/sass/variables/typography.scss */
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+/* line 72, src/sass/variables/typography.scss */
+input, textarea, input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+input, textarea, input::-moz-placeholder, textarea::-moz-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+input, textarea, input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+input, textarea, input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+input, textarea, input::placeholder, textarea::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+/* line 77, src/sass/variables/typography.scss */
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+/* line 81, src/sass/variables/typography.scss */
+strong {
+  font-weight: 700;
+}
+
+/* line 85, src/sass/variables/typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+}
+
+/* line 91, src/sass/variables/typography.scss */
+h1 {
+  line-height: 140%;
+  font-size: var(--x-large-title);
+  margin-bottom: 30px;
+}
+
+/* line 97, src/sass/variables/typography.scss */
+h2 {
+  line-height: 150%;
+  font-size: var(--large-subtitle);
+  margin-bottom: 30px;
+}
+
+/* line 103, src/sass/variables/typography.scss */
+h1 + h2 {
+  margin-top: -15px;
+}
+
+/* line 107, src/sass/variables/typography.scss */
+h3 {
+  font-weight: 400;
+  line-height: 150%;
+  font-size: var(--small-subtitle);
+}
+
+/* line 113, src/sass/variables/typography.scss */
+h4 {
+  font-weight: 400;
+  line-height: 150%;
+  font-size: var(--small-subtitle);
+}
+
+/* line 119, src/sass/variables/typography.scss */
+p {
+  line-height: 180%;
+  font-weight: 400;
+  font-size: var(--large-p);
+  margin-bottom: 30px;
+}
+
+/* line 127, src/sass/variables/typography.scss */
+button, .button, .wp-block-button__link {
+  font-weight: 600;
+  font-size: var(--large-p);
+}
+
+/* line 3, src/sass/variables/spacing.scss */
+:root {
+  --site-width:90vw;
+  --horizontal-s:2vw;
+  --horizontal:3vw;
+  --horizontal-l:6vw;
+  --horizontal-xl:10vw;
+  --vertical-s:1vw;
+  --vertical:2vw;
+  --vertical-l:4vw;
+  --vertical-xl:8vw;
+}
+
+@media (min-width: 280px) and (max-width: 799px) {
+  /* line 3, src/sass/variables/spacing.scss */
+  :root {
+    --horizontal-s:2vw;
+    --horizontal:3vw;
+    --horizontal-l:6vw;
+    --horizontal-xl:10vw;
+    --vertical-s:5vw;
+    --vertical:10vw;
+    --vertical-l:15vw;
+    --vertical-xl:20vw;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) and (orientation: portrait) {
+  /* line 3, src/sass/variables/spacing.scss */
+  :root {
+    --horizontal:6vw;
+    --vertical-s:4vw;
+    --vertical:8vw;
+    --vertical-l:10vw;
+    --vertical-xl:15vw;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+/* line 22, src/sass/variables/animations.scss */
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+}
+
+@-webkit-keyframes bounceInRight {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(3000px, 0, 0);
+            transform: translate3d(3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(-25px, 0, 0);
+            transform: translate3d(-25px, 0, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+            transform: translate3d(-5px, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInRight {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(3000px, 0, 0);
+            transform: translate3d(3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(-25px, 0, 0);
+            transform: translate3d(-25px, 0, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+            transform: translate3d(-5px, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+/* line 58, src/sass/variables/animations.scss */
+.bounceInRight {
+  -webkit-animation-name: bounceInRight;
+          animation-name: bounceInRight;
+}
+
+@-webkit-keyframes bounceInLeft {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+            transform: translate3d(-3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+            transform: translate3d(25px, 0, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+            transform: translate3d(5px, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInLeft {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+            transform: translate3d(-3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+            transform: translate3d(25px, 0, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+            transform: translate3d(5px, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+/* line 96, src/sass/variables/animations.scss */
+.bounceInLeft {
+  -webkit-animation-name: bounceInLeft;
+          animation-name: bounceInLeft;
+}
+
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+/* line 115, src/sass/variables/animations.scss */
+.slideInUp {
+  -webkit-animation-name: slideInUp;
+          animation-name: slideInUp;
+}
+
+@-webkit-keyframes pulse-dot {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
+@keyframes pulse-dot {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
+@-webkit-keyframes arrowDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10vh);
+            transform: translateY(-10vh);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(30vh);
+            transform: translateY(30vh);
+  }
+}
+
+@keyframes arrowDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10vh);
+            transform: translateY(-10vh);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(30vh);
+            transform: translateY(30vh);
+  }
+}
+
+/* line 11, src/sass/style.scss */
+h1, h2, h3, h4, h5, p {
+  z-index: 1;
+  position: relative;
+}
+
+/* ------------- Buttons ----------------------------------------------------------------------------------------------------------- */
+/* line 19, src/sass/style.scss */
+button, .button, .wp-block-button__link {
+  border-radius: 5px;
+  padding: 14px 22px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 25, src/sass/style.scss */
+button svg, .button svg, .wp-block-button__link svg {
+  margin: 5px 5px 0 0;
+}
+
+/* line 31, src/sass/style.scss */
+.wp-block-buttons {
+  display: block;
+  margin: 50px 0;
+}
+
+/* ------------- Menu Section ----------------------------------------------------------------------------------------------------------- */
+/* ------------- Main Menu ---------------- */
+/* line 43, src/sass/style.scss */
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 2;
+  position: relative;
+  max-width: var(--site-width);
+  margin: auto;
+  padding: var(--vertical) var(--horizontal);
+}
+
+/* line 54, src/sass/style.scss */
+.menu .main_navigation {
+  font-size: var(--small-subtitle);
+  font-weight: 600;
+}
+
+/* line 58, src/sass/style.scss */
+.menu .main_navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 61, src/sass/style.scss */
+.menu .main_navigation ul li {
+  margin: 20px 20px;
+}
+
+/* line 65, src/sass/style.scss */
+.menu .main_navigation ul a {
+  text-decoration: none;
+}
+
+/* ------------- Sub section ---------------- */
+/* line 74, src/sass/style.scss */
+.menu-item-has-children {
+  z-index: 20;
+  position: relative;
+}
+
+/* line 79, src/sass/style.scss */
+.menu-item-has-children:hover ul.sub-menu {
+  opacity: 1;
+  -webkit-transition-delay: 0s, 0s;
+          transition-delay: 0s, 0s;
+  visibility: visible;
+}
+
+/* line 89, src/sass/style.scss */
+ul.sub-menu {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition-property: opacity, visibility;
+  transition-property: opacity, visibility;
+  -webkit-transition-duration: 1s, 0s;
+          transition-duration: 1s, 0s;
+  -webkit-transition-delay: 0s, 1s;
+          transition-delay: 0s, 1s;
+  position: absolute;
+  z-index: 10;
+  background: #ffffff;
+  padding: 30px 30px 30px 30px;
+  min-width: 18vw;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  margin: 10px 0 0 -50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 110, src/sass/style.scss */
+ul.sub-menu:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #ffffff;
+  margin: -40px 0 0 80px;
+}
+
+/* line 120, src/sass/style.scss */
+ul.sub-menu li.menu-item {
+  margin: 5px;
+  font-size: calc(var(--small-subtitle) * .9);
+  font-weight: 600;
+}
+
+/* line 126, src/sass/style.scss */
+ul.sub-menu li.menu-item:first-child {
+  margin-top: 30px;
+}
+
+/* ------------- Hero Section ----------------------------------------------------------------------------------------------------------- */
+/* line 135, src/sass/style.scss */
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 70vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+  position: relative;
+  max-width: var(--site-width);
+  margin: auto;
+  padding: var(--vertical) var(--horizontal);
+}
+
+/* line 147, src/sass/style.scss */
+.hero h1 {
+  font-size: var(--x-large-title);
+}
+
+/* line 151, src/sass/style.scss */
+.hero .text {
+  width: 40%;
+  margin-left: var(--horizontal);
+}
+
+@media (min-width: 280px) and (max-width: 799px) {
+  /* line 151, src/sass/style.scss */
+  .hero .text {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+/* line 160, src/sass/style.scss */
+.hero .text button {
+  font-size: 1.4rem;
+}
+
+/* line 165, src/sass/style.scss */
+.hero .image {
+  position: absolute;
+  right: 10vw;
+  top: 4vw;
+  -webkit-clip-path: url(#mask);
+          clip-path: url(#mask);
+}
+
+/* line 171, src/sass/style.scss */
+.hero .image img {
+  width: 854px;
+  height: 750px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+/* line 178, src/sass/style.scss */
+.hero .image svg path {
+  width: 50vw;
+  height: 70vh;
+}
+
+@media (min-width: 280px) and (max-width: 799px) {
+  /* line 165, src/sass/style.scss */
+  .hero .image {
+    display: none;
+  }
+}
+
+/* ------------- Diensten Slider ----------------------------------------------------------------------------------------------------------- */
+/* line 197, src/sass/style.scss */
+.diensten {
+  margin-top: 1vw;
+  max-width: var(--site-width);
+  margin: auto;
+  padding: var(--vertical) var(--horizontal);
+}
+
+/* line 204, src/sass/style.scss */
+.diensten .diensten_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 207, src/sass/style.scss */
+.diensten .diensten_inner .dienst_block {
+  width: 20vw;
+  background: #ffffff;
+  padding: 50px 30px;
+  margin: 0 30px 0 0;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  z-index: 1;
+  position: relative;
+}
+
+/* line 217, src/sass/style.scss */
+.diensten .diensten_inner .dienst_block h1 {
+  font-size: var(--medium-subtitle);
+  margin-bottom: 15px;
+}
+
+/* line 222, src/sass/style.scss */
+.diensten .diensten_inner .dienst_block h2 {
+  font-size: var(--small-subtitle);
+  font-weight: 600;
+  color: #27AE60;
+  margin-bottom: 10px;
+}
+
+/* line 229, src/sass/style.scss */
+.diensten .diensten_inner .dienst_block p {
+  font-size: calc(var(--large-p) * .8);
+}
+
+/* line 233, src/sass/style.scss */
+.diensten .diensten_inner .dienst_block .button {
+  font-size: calc(var(--large-p) * .8);
+}
+
+/* line 236, src/sass/style.scss */
+.diensten .diensten_inner .dienst_block .button svg {
+  margin-left: 5px;
+}
+
+/* ------------- Text Section ----------------------------------------------------------------------------------------------------------- */
+/* line 251, src/sass/style.scss */
+.wp-block-group {
+  max-width: var(--site-width);
+  margin: auto;
+  padding: 10vh var(--horizontal);
+}
+
+/* line 256, src/sass/style.scss */
+.wp-block-group:before {
+  content: '';
+  background: url(../../images/svg/MaskShape3.svg) no-repeat;
+  position: absolute;
+  margin-top: -40vh;
+  left: -25vw;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 269, src/sass/style.scss */
+.wp-block-group h1 {
+  width: 15ch;
+  margin: 0 0 30px 0;
+}
+
+/* line 274, src/sass/style.scss */
+.wp-block-group h2 {
+  width: 25ch;
+  margin: 30px 0 30px 0;
+  color: #27AE60;
+  font-size: var(--x-large-subtitle);
+}
+
+/* line 282, src/sass/style.scss */
+.wp-block-group .wp-block-quote {
+  background: #27AE60;
+  color: #ffffff;
+  padding: var(--vertical) var(--horizontal);
+  width: 75ch;
+  margin-bottom: 30px;
+}
+
+/* line 289, src/sass/style.scss */
+.wp-block-group .wp-block-quote p {
+  font-size: var(--medium-subtitle);
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 0;
+}
+
+/* line 297, src/sass/style.scss */
+.wp-block-group .wp-block-group {
+  padding: 5vh 25vw 0 0;
+  margin: 0 0 5vh var(--horizontal);
+  display: inline-block;
+}
+
+/* line 302, src/sass/style.scss */
+.wp-block-group .wp-block-group:before {
+  display: none;
+}
+
+/* line 306, src/sass/style.scss */
+.wp-block-group .wp-block-group h2 {
+  width: auto;
+  font-size: var(--large-subtitle);
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #0E131F;
+}
+
+/* line 314, src/sass/style.scss */
+.wp-block-group .wp-block-group h3 {
+  width: auto;
+  font-size: var(--medium-subtitle);
+  font-weight: 500;
+  color: #27AE60;
+  margin-bottom: 30px;
+}
+
+/* line 322, src/sass/style.scss */
+.wp-block-group .wp-block-group h4 {
+  width: auto;
+  font-size: var(--small-subtitle);
+  font-weight: 500;
+  color: #27AE60;
+  margin-bottom: 30px;
+}
+
+/* line 330, src/sass/style.scss */
+.wp-block-group .wp-block-group .wp-block-quote {
+  margin-left: calc(var(--horizontal) * -1);
+}
+
+/* line 337, src/sass/style.scss */
+.wp-block-group__inner-container {
+  z-index: 1;
+  position: relative;
+}
+
+/* ------------- Gutenberg Layout ----------------------------------------------------------------------------------------------------------- */
+/* line 347, src/sass/style.scss */
+.wp-block-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 350, src/sass/style.scss */
+.wp-block-columns .wp-block-column {
+  margin-right: 50px;
+}
+
+/* line 354, src/sass/style.scss */
+.wp-block-columns .wp-block-column:last-child {
+  margin-right: 0;
+}
+
+/* ------------- Gutenberg Hero image ----------------------------------------------------------------------------------------------------------- */
+/* line 362, src/sass/style.scss */
+.wp-block-cover {
+  z-index: 1;
+  position: relative;
+  max-width: var(--site-width);
+  margin: auto;
+  min-height: 60vh;
+  padding: var(--vertical) calc(var(--horizontal) * 2);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+}
+
+/* line 382, src/sass/style.scss */
+.wp-block-cover h1, .wp-block-cover h2, .wp-block-cover h3 {
+  color: #ffffff;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+/* line 387, src/sass/style.scss */
+.wp-block-cover h1 {
+  width: 20ch;
+}
+
+/* line 391, src/sass/style.scss */
+.wp-block-cover h2 {
+  width: 30ch;
+}
+
+/* ------------- Persoon contact block ----------------------------------------------------------------------------------------------------------- */
+/* line 399, src/sass/style.scss */
+.persoon {
+  width: 33vw;
+  background: #ffffff;
+  padding: 50px 50px;
+  margin: 0 30px 0 0;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  z-index: 1;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 411, src/sass/style.scss */
+.persoon .image {
+  margin-right: 50px;
+}
+
+/* line 414, src/sass/style.scss */
+.persoon .image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+/* line 423, src/sass/style.scss */
+.persoon .text h1 {
+  font-size: var(--medium-subtitle);
+  margin: 15px 0 0 0;
+  width: auto;
+}
+
+/* line 429, src/sass/style.scss */
+.persoon .text h2 {
+  font-size: var(--small-subtitle);
+  font-weight: 600;
+  color: #27AE60;
+  margin: 0 0 15px 0;
+}
+
+/* line 436, src/sass/style.scss */
+.persoon .text .email {
+  text-decoration: none;
+  font-size: var(--large-p);
+}
+
+/* line 441, src/sass/style.scss */
+.persoon .text .telefoon {
+  font-size: var(--large-p);
+  margin: 10px 0 0 0;
+}
+
+/* ------------- Form Section ----------------------------------------------------------------------------------------------------------- */
+/* line 455, src/sass/style.scss */
+#wpforms-53 {
+  width: 40vw;
+  background: #EAF3F3;
+  padding: var(--vertical) var(--horizontal);
+}
+
+/* line 460, src/sass/style.scss */
+#wpforms-53 input {
+  border-color: #cae0e0 !important;
+  background-color: white !important;
+  border-radius: 3px !important;
+}
+
+/* line 468, src/sass/style.scss */
+.wpforms-submit.button {
+  border-radius: 5px !important;
+  padding: 14px 22px !important;
+  text-decoration: none;
+  background: #27AE60 !important;
+  color: #ffffff !important;
+  border: 0 !important;
+}
+
+/* line 476, src/sass/style.scss */
+.wpforms-submit.button:hover {
+  background: #0E131F !important;
+}
+
+/* line 483, src/sass/style.scss */
+.wpforms-confirmation-container-full, div[submit-success] > .wpforms-confirmation-container-full:not(.wpforms-redirection-message) {
+  background: none !important;
+  border: 0 !important;
+}
+
+/* ------------- 404 page ----------------------------------------------------------------------------------------------------------- */
+/* line 491, src/sass/style.scss */
+.fourofour {
+  margin-top: 10vh;
+  text-align: center;
+}
+
+/* ------------- Section ----------------------------------------------------------------------------------------------------------- */
+/* line 500, src/sass/style.scss */
+.coming_soon_logo {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 507, src/sass/style.scss */
+.coming_soon_logo svg {
+  width: 500px;
+  height: 400px;
+}
