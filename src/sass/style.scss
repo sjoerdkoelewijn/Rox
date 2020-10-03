@@ -476,8 +476,11 @@ ul.sub-menu {
     &:hover {
         background:$black !important;
     }
-
     
+}
+
+.wpforms-container-full {
+    margin:0 !important;
 }
 
 .wpforms-confirmation-container-full, div[submit-success] > .wpforms-confirmation-container-full:not(.wpforms-redirection-message) {

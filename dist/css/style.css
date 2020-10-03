@@ -1268,21 +1268,26 @@ ul.sub-menu li.menu-item:first-child {
   background: #0E131F !important;
 }
 
-/* line 483, src/sass/style.scss */
+/* line 482, src/sass/style.scss */
+.wpforms-container-full {
+  margin: 0 !important;
+}
+
+/* line 486, src/sass/style.scss */
 .wpforms-confirmation-container-full, div[submit-success] > .wpforms-confirmation-container-full:not(.wpforms-redirection-message) {
   background: none !important;
   border: 0 !important;
 }
 
 /* ------------- 404 page ----------------------------------------------------------------------------------------------------------- */
-/* line 491, src/sass/style.scss */
+/* line 494, src/sass/style.scss */
 .fourofour {
   margin-top: 10vh;
   text-align: center;
 }
 
 /* ------------- Section ----------------------------------------------------------------------------------------------------------- */
-/* line 500, src/sass/style.scss */
+/* line 503, src/sass/style.scss */
 .coming_soon_logo {
   width: 100vw;
   height: 100vh;
@@ -1297,7 +1302,7 @@ ul.sub-menu li.menu-item:first-child {
           justify-content: center;
 }
 
-/* line 507, src/sass/style.scss */
+/* line 510, src/sass/style.scss */
 .coming_soon_logo svg {
   width: 500px;
   height: 400px;
