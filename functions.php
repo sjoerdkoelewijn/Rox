@@ -14,6 +14,8 @@ if(strpos($_SERVER['HTTP_HOST'], 'roxtar.local') !== false){
 
 } else {
 
+    include 'functions/acf.php';
+
 	function favicon() {
 		echo '<link rel="Shortcut Icon" type="image/x-icon" href="'. get_template_directory() . '/images/favicon.ico" />';
 	}
