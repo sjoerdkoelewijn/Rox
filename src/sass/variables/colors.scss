@@ -6,7 +6,7 @@ $white:#ffffff;
 
 $color:#27AE60;
 $bgcolor:#EAF3F3;
-$actioncolor:#BB6BD9;
+$actioncolor:#FF6A16;
 
 $box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
 $text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
@@ -67,6 +67,14 @@ button, .button, .wp-block-button__link {
   }
 
 }
+
+.button.action {
+  .wp-block-button__link {
+    background:$actioncolor;
+  }  
+}
+
+.wp-block-button.action
 
 .wp-block-button.is-style-outline {
   .wp-block-button__link {

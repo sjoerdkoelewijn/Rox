@@ -71,6 +71,12 @@ button:visited:hover, .button:visited:hover, .wp-block-button__link:visited:hove
 }
 
 /* line 72, src/sass/variables/colors.scss */
+.button.action .wp-block-button__link {
+  background: #FF6A16;
+}
+
+/* line 80, src/sass/variables/colors.scss */
+.wp-block-button.action
 .wp-block-button.is-style-outline .wp-block-button__link {
   background: none;
   border: 2px solid #0E131F;
@@ -79,7 +85,8 @@ button:visited:hover, .button:visited:hover, .wp-block-button__link:visited:hove
   transition: background-color .5s ease, color .5s ease;
 }
 
-/* line 78, src/sass/variables/colors.scss */
+/* line 86, src/sass/variables/colors.scss */
+.wp-block-button.action
 .wp-block-button.is-style-outline .wp-block-button__link:hover {
   -webkit-transition: background-color .5s ease, color .5s ease;
   transition: background-color .5s ease, color .5s ease;
