@@ -933,9 +933,10 @@ ul.sub-menu li.menu-item:first-child {
 /* line 160, src/sass/style.scss */
 .hero .text button {
   font-size: 1.4rem;
+  background-color: #BB6BD9;
 }
 
-/* line 165, src/sass/style.scss */
+/* line 166, src/sass/style.scss */
 .hero .image {
   position: absolute;
   right: 10vw;
@@ -944,7 +945,7 @@ ul.sub-menu li.menu-item:first-child {
           clip-path: url(#mask);
 }
 
-/* line 171, src/sass/style.scss */
+/* line 172, src/sass/style.scss */
 .hero .image img {
   width: 854px;
   height: 750px;
@@ -952,21 +953,21 @@ ul.sub-menu li.menu-item:first-child {
      object-fit: fill;
 }
 
-/* line 178, src/sass/style.scss */
+/* line 179, src/sass/style.scss */
 .hero .image svg path {
   width: 50vw;
   height: 70vh;
 }
 
 @media (min-width: 280px) and (max-width: 799px) {
-  /* line 165, src/sass/style.scss */
+  /* line 166, src/sass/style.scss */
   .hero .image {
     display: none;
   }
 }
 
 /* ------------- Diensten Slider ----------------------------------------------------------------------------------------------------------- */
-/* line 197, src/sass/style.scss */
+/* line 198, src/sass/style.scss */
 .diensten {
   margin-top: 1vw;
   max-width: var(--site-width);
@@ -974,14 +975,14 @@ ul.sub-menu li.menu-item:first-child {
   padding: var(--vertical) var(--horizontal);
 }
 
-/* line 204, src/sass/style.scss */
+/* line 205, src/sass/style.scss */
 .diensten .diensten_inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-/* line 207, src/sass/style.scss */
+/* line 208, src/sass/style.scss */
 .diensten .diensten_inner .dienst_block {
   width: 20vw;
   background: #ffffff;
@@ -994,13 +995,13 @@ ul.sub-menu li.menu-item:first-child {
   position: relative;
 }
 
-/* line 217, src/sass/style.scss */
+/* line 218, src/sass/style.scss */
 .diensten .diensten_inner .dienst_block h1 {
   font-size: var(--medium-subtitle);
   margin-bottom: 15px;
 }
 
-/* line 222, src/sass/style.scss */
+/* line 223, src/sass/style.scss */
 .diensten .diensten_inner .dienst_block h2 {
   font-size: var(--small-subtitle);
   font-weight: 600;
@@ -1008,30 +1009,30 @@ ul.sub-menu li.menu-item:first-child {
   margin-bottom: 10px;
 }
 
-/* line 229, src/sass/style.scss */
+/* line 230, src/sass/style.scss */
 .diensten .diensten_inner .dienst_block p {
   font-size: calc(var(--large-p) * .8);
 }
 
-/* line 233, src/sass/style.scss */
+/* line 234, src/sass/style.scss */
 .diensten .diensten_inner .dienst_block .button {
   font-size: calc(var(--large-p) * .8);
 }
 
-/* line 236, src/sass/style.scss */
+/* line 237, src/sass/style.scss */
 .diensten .diensten_inner .dienst_block .button svg {
   margin-left: 5px;
 }
 
 /* ------------- Text Section ----------------------------------------------------------------------------------------------------------- */
-/* line 251, src/sass/style.scss */
+/* line 252, src/sass/style.scss */
 .wp-block-group {
   max-width: var(--site-width);
   margin: auto;
   padding: 10vh var(--horizontal);
 }
 
-/* line 256, src/sass/style.scss */
+/* line 257, src/sass/style.scss */
 .wp-block-group:before {
   content: '';
   background: url(../../images/svg/MaskShape3.svg) no-repeat;
@@ -1043,13 +1044,13 @@ ul.sub-menu li.menu-item:first-child {
   height: 100%;
 }
 
-/* line 269, src/sass/style.scss */
+/* line 270, src/sass/style.scss */
 .wp-block-group h1 {
   width: 15ch;
   margin: 0 0 30px 0;
 }
 
-/* line 274, src/sass/style.scss */
+/* line 275, src/sass/style.scss */
 .wp-block-group h2 {
   width: 25ch;
   margin: 30px 0 30px 0;
@@ -1057,7 +1058,7 @@ ul.sub-menu li.menu-item:first-child {
   font-size: var(--x-large-subtitle);
 }
 
-/* line 282, src/sass/style.scss */
+/* line 283, src/sass/style.scss */
 .wp-block-group .wp-block-quote {
   background: #27AE60;
   color: #ffffff;
@@ -1066,7 +1067,7 @@ ul.sub-menu li.menu-item:first-child {
   margin-bottom: 30px;
 }
 
-/* line 289, src/sass/style.scss */
+/* line 290, src/sass/style.scss */
 .wp-block-group .wp-block-quote p {
   font-size: var(--medium-subtitle);
   font-weight: 400;
@@ -1074,19 +1075,19 @@ ul.sub-menu li.menu-item:first-child {
   margin-bottom: 0;
 }
 
-/* line 297, src/sass/style.scss */
+/* line 298, src/sass/style.scss */
 .wp-block-group .wp-block-group {
   padding: 5vh 25vw 0 0;
   margin: 0 0 5vh var(--horizontal);
   display: inline-block;
 }
 
-/* line 302, src/sass/style.scss */
+/* line 303, src/sass/style.scss */
 .wp-block-group .wp-block-group:before {
   display: none;
 }
 
-/* line 306, src/sass/style.scss */
+/* line 307, src/sass/style.scss */
 .wp-block-group .wp-block-group h2 {
   width: auto;
   font-size: var(--large-subtitle);
@@ -1095,7 +1096,7 @@ ul.sub-menu li.menu-item:first-child {
   color: #0E131F;
 }
 
-/* line 314, src/sass/style.scss */
+/* line 315, src/sass/style.scss */
 .wp-block-group .wp-block-group h3 {
   width: auto;
   font-size: var(--medium-subtitle);
@@ -1104,7 +1105,7 @@ ul.sub-menu li.menu-item:first-child {
   margin-bottom: 30px;
 }
 
-/* line 322, src/sass/style.scss */
+/* line 323, src/sass/style.scss */
 .wp-block-group .wp-block-group h4 {
   width: auto;
   font-size: var(--small-subtitle);
@@ -1113,37 +1114,37 @@ ul.sub-menu li.menu-item:first-child {
   margin-bottom: 30px;
 }
 
-/* line 330, src/sass/style.scss */
+/* line 331, src/sass/style.scss */
 .wp-block-group .wp-block-group .wp-block-quote {
   margin-left: calc(var(--horizontal) * -1);
 }
 
-/* line 337, src/sass/style.scss */
+/* line 338, src/sass/style.scss */
 .wp-block-group__inner-container {
   z-index: 1;
   position: relative;
 }
 
 /* ------------- Gutenberg Layout ----------------------------------------------------------------------------------------------------------- */
-/* line 347, src/sass/style.scss */
+/* line 348, src/sass/style.scss */
 .wp-block-columns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-/* line 350, src/sass/style.scss */
+/* line 351, src/sass/style.scss */
 .wp-block-columns .wp-block-column {
   margin-right: 50px;
 }
 
-/* line 354, src/sass/style.scss */
+/* line 355, src/sass/style.scss */
 .wp-block-columns .wp-block-column:last-child {
   margin-right: 0;
 }
 
 /* ------------- Gutenberg Hero image ----------------------------------------------------------------------------------------------------------- */
-/* line 362, src/sass/style.scss */
+/* line 363, src/sass/style.scss */
 .wp-block-cover {
   z-index: 1;
   position: relative;
@@ -1166,24 +1167,24 @@ ul.sub-menu li.menu-item:first-child {
   border-radius: 10px;
 }
 
-/* line 382, src/sass/style.scss */
+/* line 383, src/sass/style.scss */
 .wp-block-cover h1, .wp-block-cover h2, .wp-block-cover h3 {
   color: #ffffff;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
 }
 
-/* line 387, src/sass/style.scss */
+/* line 388, src/sass/style.scss */
 .wp-block-cover h1 {
   width: 20ch;
 }
 
-/* line 391, src/sass/style.scss */
+/* line 392, src/sass/style.scss */
 .wp-block-cover h2 {
   width: 30ch;
 }
 
 /* ------------- Persoon contact block ----------------------------------------------------------------------------------------------------------- */
-/* line 399, src/sass/style.scss */
+/* line 400, src/sass/style.scss */
 .persoon {
   width: 33vw;
   background: #ffffff;
@@ -1199,26 +1200,26 @@ ul.sub-menu li.menu-item:first-child {
   display: flex;
 }
 
-/* line 411, src/sass/style.scss */
+/* line 412, src/sass/style.scss */
 .persoon .image {
   margin-right: 50px;
 }
 
-/* line 414, src/sass/style.scss */
+/* line 415, src/sass/style.scss */
 .persoon .image img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
 }
 
-/* line 423, src/sass/style.scss */
+/* line 424, src/sass/style.scss */
 .persoon .text h1 {
   font-size: var(--medium-subtitle);
   margin: 15px 0 0 0;
   width: auto;
 }
 
-/* line 429, src/sass/style.scss */
+/* line 430, src/sass/style.scss */
 .persoon .text h2 {
   font-size: var(--small-subtitle);
   font-weight: 600;
@@ -1226,34 +1227,34 @@ ul.sub-menu li.menu-item:first-child {
   margin: 0 0 15px 0;
 }
 
-/* line 436, src/sass/style.scss */
+/* line 437, src/sass/style.scss */
 .persoon .text .email {
   text-decoration: none;
   font-size: var(--large-p);
 }
 
-/* line 441, src/sass/style.scss */
+/* line 442, src/sass/style.scss */
 .persoon .text .telefoon {
   font-size: var(--large-p);
   margin: 10px 0 0 0;
 }
 
 /* ------------- Form Section ----------------------------------------------------------------------------------------------------------- */
-/* line 455, src/sass/style.scss */
+/* line 456, src/sass/style.scss */
 #wpforms-53, #wpforms-38 {
   width: 40vw;
   background: #EAF3F3;
   padding: var(--vertical) var(--horizontal);
 }
 
-/* line 460, src/sass/style.scss */
+/* line 461, src/sass/style.scss */
 #wpforms-53 input, #wpforms-38 input {
   border-color: #cae0e0 !important;
   background-color: white !important;
   border-radius: 3px !important;
 }
 
-/* line 468, src/sass/style.scss */
+/* line 469, src/sass/style.scss */
 .wpforms-submit.button {
   border-radius: 5px !important;
   padding: 14px 22px !important;
@@ -1263,31 +1264,31 @@ ul.sub-menu li.menu-item:first-child {
   border: 0 !important;
 }
 
-/* line 476, src/sass/style.scss */
+/* line 477, src/sass/style.scss */
 .wpforms-submit.button:hover {
   background: #0E131F !important;
 }
 
-/* line 482, src/sass/style.scss */
+/* line 483, src/sass/style.scss */
 .wpforms-container-full {
   margin: 0 !important;
 }
 
-/* line 486, src/sass/style.scss */
+/* line 487, src/sass/style.scss */
 .wpforms-confirmation-container-full, div[submit-success] > .wpforms-confirmation-container-full:not(.wpforms-redirection-message) {
   background: none !important;
   border: 0 !important;
 }
 
 /* ------------- 404 page ----------------------------------------------------------------------------------------------------------- */
-/* line 494, src/sass/style.scss */
+/* line 495, src/sass/style.scss */
 .fourofour {
   margin-top: 10vh;
   text-align: center;
 }
 
 /* ------------- Section ----------------------------------------------------------------------------------------------------------- */
-/* line 503, src/sass/style.scss */
+/* line 504, src/sass/style.scss */
 .coming_soon_logo {
   width: 100vw;
   height: 100vh;
@@ -1302,7 +1303,7 @@ ul.sub-menu li.menu-item:first-child {
           justify-content: center;
 }
 
-/* line 510, src/sass/style.scss */
+/* line 511, src/sass/style.scss */
 .coming_soon_logo svg {
   width: 500px;
   height: 400px;
