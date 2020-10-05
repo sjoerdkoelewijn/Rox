@@ -15,6 +15,7 @@
 @media (min-width: 280px) and (max-width: 799px) {
   /* line 3, src/sass/variables/spacing.scss */
   :root {
+    --site-width:100vw;
     --horizontal-s:2vw;
     --horizontal:3vw;
     --horizontal-l:6vw;

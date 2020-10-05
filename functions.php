@@ -119,3 +119,10 @@ add_action('init', function () {
 	add_image_size( 'medium_image', 960, 638, false ); 
     add_image_size( 'small_image', 300, 300, true ); // (cropped)
 
+
+/*************************** Custom Editor colors *********************************/
+
+add_theme_support( 'disable-custom-colors' );
+add_theme_support( 'editor-color-palette' );
+add_theme_support('editor-gradient-presets', []);
+add_theme_support('disable-custom-gradients', true);

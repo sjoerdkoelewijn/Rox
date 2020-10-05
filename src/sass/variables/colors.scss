@@ -38,7 +38,6 @@ a {
     color:$color;
   }
 
-
 }
 
 h1, h2, h3, h4 {
@@ -68,13 +67,6 @@ button, .button, .wp-block-button__link {
 
 }
 
-.wp-block-button.action {
-  .wp-block-button__link {
-    background:$actioncolor;
-  }  
-}
-
-.wp-block-button.action
 
 .wp-block-button.is-style-outline {
   .wp-block-button__link {
@@ -92,3 +84,18 @@ button, .button, .wp-block-button__link {
   }
 }
 
+
+.wp-block-button.orange {
+  .wp-block-button__link {
+    background:$actioncolor;
+    color:$white;
+    transition: background-color .5s ease, color .5s ease;
+
+    &:hover {
+      transition: background-color .5s ease, color .5s ease;
+      background:$black;
+      color:$white;
+    }
+
+  }
+}

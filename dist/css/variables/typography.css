@@ -39,12 +39,12 @@ a:visited:hover {
   color: #27AE60;
 }
 
-/* line 45, src/sass/variables/colors.scss */
+/* line 44, src/sass/variables/colors.scss */
 h1 strong, h2 strong, h3 strong, h4 strong {
   color: #27AE60;
 }
 
-/* line 50, src/sass/variables/colors.scss */
+/* line 49, src/sass/variables/colors.scss */
 button, .button, .wp-block-button__link {
   background: #27AE60;
   color: #ffffff;
@@ -52,7 +52,7 @@ button, .button, .wp-block-button__link {
   transition: background-color .5s ease, color .5s ease;
 }
 
-/* line 55, src/sass/variables/colors.scss */
+/* line 54, src/sass/variables/colors.scss */
 button:hover, .button:hover, .wp-block-button__link:hover {
   -webkit-transition: background-color .5s ease, color .5s ease;
   transition: background-color .5s ease, color .5s ease;
@@ -60,23 +60,17 @@ button:hover, .button:hover, .wp-block-button__link:hover {
   color: #ffffff;
 }
 
-/* line 61, src/sass/variables/colors.scss */
+/* line 60, src/sass/variables/colors.scss */
 button:visited, .button:visited, .wp-block-button__link:visited {
   color: #ffffff;
 }
 
-/* line 65, src/sass/variables/colors.scss */
+/* line 64, src/sass/variables/colors.scss */
 button:visited:hover, .button:visited:hover, .wp-block-button__link:visited:hover {
   color: #ffffff;
 }
 
 /* line 72, src/sass/variables/colors.scss */
-.button.action .wp-block-button__link {
-  background: #FF6A16;
-}
-
-/* line 80, src/sass/variables/colors.scss */
-.wp-block-button.action
 .wp-block-button.is-style-outline .wp-block-button__link {
   background: none;
   border: 2px solid #0E131F;
@@ -85,9 +79,24 @@ button:visited:hover, .button:visited:hover, .wp-block-button__link:visited:hove
   transition: background-color .5s ease, color .5s ease;
 }
 
-/* line 86, src/sass/variables/colors.scss */
-.wp-block-button.action
+/* line 78, src/sass/variables/colors.scss */
 .wp-block-button.is-style-outline .wp-block-button__link:hover {
+  -webkit-transition: background-color .5s ease, color .5s ease;
+  transition: background-color .5s ease, color .5s ease;
+  background: #0E131F;
+  color: #ffffff;
+}
+
+/* line 89, src/sass/variables/colors.scss */
+.wp-block-button.orange .wp-block-button__link {
+  background: #FF6A16;
+  color: #ffffff;
+  -webkit-transition: background-color .5s ease, color .5s ease;
+  transition: background-color .5s ease, color .5s ease;
+}
+
+/* line 94, src/sass/variables/colors.scss */
+.wp-block-button.orange .wp-block-button__link:hover {
   -webkit-transition: background-color .5s ease, color .5s ease;
   transition: background-color .5s ease, color .5s ease;
   background: #0E131F;
@@ -115,14 +124,15 @@ button:visited:hover, .button:visited:hover, .wp-block-button__link:visited:hove
 @media (min-width: 280px) and (max-width: 799px) {
   /* line 9, src/sass/variables/typography.scss */
   :root {
-    --x-large-title:13vw;
+    --x-large-title:12vw;
     --large-title:10vw;
     --medium-title:8vw;
     --small-title:7vw;
+    --x-large-subtitle:9vw;
     --large-subtitle:8vw;
     --medium-subtitle:7vw;
-    --small-subtitle:6vw;
-    --large-p:1.3rem;
+    --small-subtitle:5vw;
+    --large-p:1.2rem;
     --small-p:.85rem;
   }
 }
@@ -145,12 +155,23 @@ button:visited:hover, .button:visited:hover, .wp-block-button__link:visited:hove
   }
 }
 
-/* line 68, src/sass/variables/typography.scss */
+@media (min-width: 800px) and (max-width: 1800px) {
+  /* line 9, src/sass/variables/typography.scss */
+  :root {
+    --x-large-title:6vw;
+    --x-large-subtitle:3.5vw;
+    --large-subtitle:3vw;
+    --medium-subtitle:2.2vw;
+    --small-subtitle:1.8vw;
+  }
+}
+
+/* line 74, src/sass/variables/typography.scss */
 html {
   font-family: "Poppins", sans-serif;
 }
 
-/* line 72, src/sass/variables/typography.scss */
+/* line 78, src/sass/variables/typography.scss */
 input, textarea, input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -172,56 +193,56 @@ input, textarea, input::placeholder, textarea::placeholder {
   font-weight: 300;
 }
 
-/* line 77, src/sass/variables/typography.scss */
+/* line 83, src/sass/variables/typography.scss */
 button {
   font-family: "Poppins", sans-serif;
 }
 
-/* line 81, src/sass/variables/typography.scss */
+/* line 87, src/sass/variables/typography.scss */
 strong {
   font-weight: 700;
 }
 
-/* line 85, src/sass/variables/typography.scss */
+/* line 91, src/sass/variables/typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
   font-weight: 800;
 }
 
-/* line 91, src/sass/variables/typography.scss */
+/* line 97, src/sass/variables/typography.scss */
 h1 {
   line-height: 140%;
   font-size: var(--x-large-title);
   margin-bottom: 30px;
 }
 
-/* line 97, src/sass/variables/typography.scss */
+/* line 103, src/sass/variables/typography.scss */
 h2 {
   line-height: 150%;
   font-size: var(--large-subtitle);
   margin-bottom: 30px;
 }
 
-/* line 103, src/sass/variables/typography.scss */
+/* line 109, src/sass/variables/typography.scss */
 h1 + h2 {
   margin-top: -15px;
 }
 
-/* line 107, src/sass/variables/typography.scss */
+/* line 113, src/sass/variables/typography.scss */
 h3 {
   font-weight: 400;
   line-height: 150%;
   font-size: var(--small-subtitle);
 }
 
-/* line 113, src/sass/variables/typography.scss */
+/* line 119, src/sass/variables/typography.scss */
 h4 {
   font-weight: 400;
   line-height: 150%;
   font-size: var(--small-subtitle);
 }
 
-/* line 119, src/sass/variables/typography.scss */
+/* line 125, src/sass/variables/typography.scss */
 p {
   line-height: 180%;
   font-weight: 400;
@@ -229,7 +250,7 @@ p {
   margin-bottom: 30px;
 }
 
-/* line 127, src/sass/variables/typography.scss */
+/* line 133, src/sass/variables/typography.scss */
 button, .button, .wp-block-button__link {
   font-weight: 600;
   font-size: var(--large-p);

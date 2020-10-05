@@ -27,16 +27,17 @@ $header-font:'Poppins', sans-serif;
     --small-btn:0.9rem;
 
     @include phone {
-        --x-large-title:13vw;
+        --x-large-title:12vw;
         --large-title:10vw;
         --medium-title:8vw;
         --small-title:7vw;
 
+        --x-large-subtitle:9vw;
         --large-subtitle:8vw;
         --medium-subtitle:7vw;
-        --small-subtitle:6vw;
+        --small-subtitle:5vw;
 
-        --large-p:1.3rem;
+        --large-p:1.2rem;
         --small-p:.85rem;
         
     }
@@ -60,7 +61,12 @@ $header-font:'Poppins', sans-serif;
     }
 
     @include desktop-s {
-      
+        --x-large-title:6vw;
+
+        --x-large-subtitle:3.5vw;
+        --large-subtitle:3vw;
+        --medium-subtitle:2.2vw;
+        --small-subtitle:1.8vw;
     }
 
 }

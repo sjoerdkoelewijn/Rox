@@ -9,7 +9,6 @@ $id = 'diensten-' . $block['id'];
 
         <?php if( have_rows('diensten') ): ?>
 
-            <div class="diensten_inner">
 
                 <?php while ( have_rows('diensten') ) : the_row(); ?>
 
@@ -29,14 +28,11 @@ $id = 'diensten-' . $block['id'];
 
                         <a class="button" aria-label="Lees meer over <?php the_sub_field('subheader'); ?>" title="Lees meer over <?php the_sub_field('subheader'); ?><?php the_sub_field('cta'); ?>" href="<?php the_sub_field('url'); ?>">
                             <?php the_sub_field('cta'); ?>
-                            <?php echo file_get_contents(get_template_directory() . "/images/svg/arrowRightIcon.svg"); ?>
                         </a>
 
                     </section>
 
                 <?php endwhile; ?>
-
-            </div>    
             
         <?php else : ?>
 

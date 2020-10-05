@@ -14,6 +14,8 @@
     --vertical-xl:8vw;
 
     @include phone {
+        --site-width:100vw;
+
         --horizontal-s:2vw;
         --horizontal:3vw;
         --horizontal-l:6vw;

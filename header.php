@@ -16,15 +16,20 @@
         <?php wp_head(); ?>
     </head>
 
-    <body <?php body_class(); ?> >
+    <body <?php body_class(); ?>>
 
-        <header class="menu">
+        <header class="menu hidden" data-main-menu>
 
             <a title="<?php bloginfo( 'name' ); ?>" aria-label="Visit the Homepage" class="logo" href="/">
                 <?php echo file_get_contents(get_template_directory() . "/images/svg/logo.svg"); ?>
             </a>
 
             <?php include('parts/main-menu.php'); ?>
+
+            <button class="open" data-main-menu-toggle>
+                <?php echo file_get_contents(get_template_directory() . "/images/svg/hamburgerIcon.svg"); ?>
+                Menu
+            </button>
 
         </header>
 

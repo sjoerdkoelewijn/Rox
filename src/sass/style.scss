@@ -34,8 +34,6 @@ button, .button, .wp-block-button__link {
 }
 
 
-
-
 /* ------------- Menu Section ----------------------------------------------------------------------------------------------------------- */
 
 /* ------------- Main Menu ---------------- */
@@ -67,6 +65,39 @@ button, .button, .wp-block-button__link {
             }
         }
     }
+
+   
+    .menu-item.phone, .menu-item.email {
+
+        font-weight:400;
+        font-size:90%;
+        margin:22px 0 0 15px;
+
+        @include phone {
+            font-weight:600;
+            font-size:100%;
+            margin:0;
+        }
+
+        @include desktop-s {
+            display:none;
+        }
+
+    }
+
+    .menu-item.phone {
+        background: url(../../images/svg/phoneIcon.svg) no-repeat;
+        padding-left:32px;
+        background-position: left 3px;
+    }
+
+    .menu-item.email {
+        background: url(../../images/svg/emailIcon.svg) no-repeat;
+        padding-left:35px;
+        background-size: 25px 19px;
+        background-position: left 3px;
+    }
+    
 }
 
 /* ------------- Sub section ---------------- */
@@ -128,6 +159,157 @@ ul.sub-menu {
     }
  
 }
+
+@include phone {
+
+    .menu {
+        &:after {
+            content:'';
+            width:100vw;
+            height:100vh;
+            background:rgba($black, .5);
+            position:absolute;
+            z-index:999;
+            display:block;
+            margin:calc(var(--vertical) * -1) calc(var(--horizontal) * -1);
+        }
+    }
+
+    .main_menu_wrap {
+        width:95vw;
+        height:100vh;
+        margin:calc(var(--vertical) * -1);
+
+        position:fixed;
+        right:0;
+        
+        background:$white;
+        padding:20px;
+
+        z-index:1000;
+
+        
+
+        .main_navigation ul{
+
+            &:before {
+                content:'';
+                width:400px;
+                height:100px;
+                background:url(../../images/svg/logo.svg) no-repeat;
+            }
+
+            flex-direction: column;
+            font-weight: 400;
+
+            .menu-item {
+                margin:10px 0;
+            }
+
+            
+
+            ul.sub-menu {
+                margin:0;
+                padding:15px 15px 0 15px;
+
+                position:relative;
+                visibility:visible;
+                opacity:1;
+                background:none;
+                
+                min-width:auto;
+                box-shadow: none;
+                border-radius:0;
+
+                li.menu-item {
+                    margin:10px 0;
+                    font-weight: 400;
+                    font-size: var(--small-subtitle);
+                }
+               
+                &:before {
+                    content:none;
+                }
+
+                li.menu-item:first-child {
+                    margin-top:10px;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+ /* ------------- Open / Close Phone ---------------- */
+
+ .open, .close {
+    display:none;
+
+    @include phone{
+        display:block;
+    }
+}
+
+@include phone{
+
+    .close {
+        position:fixed;
+        z-index:1001;
+        top:20px;
+        right:40px;
+        background:none;        
+    }
+
+    .open {
+        background:$white;
+        height:90px;
+        border-radius:200px;
+        color:$black;
+        font-weight:400;
+        font-size:var(--medium-p);
+
+        &:hover {
+            background:$lightgrey;
+        }
+    }
+
+    .hidden {
+
+        &:after {
+            opacity:0;
+            visibility: hidden;
+            transition-property: opacity, visibility;
+            transition-duration: .5s, 0s;
+            transition-delay: 0s, .5s;
+
+        }
+        
+        .main_menu_wrap {
+            transform: translate3d(85vw, 0, 0);
+            transition: transform .6s ease-in-out;  
+        }
+
+    }
+
+    .visible {
+
+        &:after {
+            opacity:1;            
+            visibility:visible;
+        }
+        
+        .main_menu_wrap {
+            transform: translate3d(0, 0, 0);
+            transition: transform .6s ease-in-out;
+        }
+
+    }
+
+}
+
 
 
 /* ------------- Hero Section ----------------------------------------------------------------------------------------------------------- */
@@ -196,25 +378,64 @@ ul.sub-menu {
 /* ------------- Diensten Slider ----------------------------------------------------------------------------------------------------------- */
 
 .diensten {
-    margin-top:1vw;  
+    z-index:1;
+    position:relative;        
+    padding: var(--vertical) var(--horizontal);
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
 
-    max-width:var(--site-width);
-    margin:auto;
-    padding:var(--vertical) var(--horizontal);
+    -webkit-overflow-scrolling: touch;
 
-    .diensten_inner {
-        display: flex;  
+    &::-webkit-scrollbar {
+        height: 8px; 
+        border: 0;
+
+        @include phone {
+            height:3px;
+        }
+    }
+
+    &::-webkit-scrollbar-track {
+        border-radius: 0;
+        background: $white;
+    }
+      
+    &::-webkit-scrollbar-thumb {
+        border-radius: 0;
+        background: $color;
+    }
+
+
+    @include desktop {
+        max-width:var(--site-width);
+        margin:1vw auto;
         
+    } 
+           
         .dienst_block {
-            width:20vw;
             background:$white;
             padding:50px 30px;
             margin:0 30px 0 0;
             box-shadow: $box-shadow;
-            border-radius:5px;
-            z-index:1;
-            position:relative;
+            border-radius:5px;            
+            min-width:350px;
     
+            @include desktop {
+                width:25%;
+                min-width:auto;
+
+                &:last-child {
+                    margin-right:0;
+                }
+
+            }
+
+            @include tablet {
+                min-width:500px;
+            }
+
             h1 {
                 font-size:var(--medium-subtitle);
                 margin-bottom:15px; 
@@ -229,19 +450,30 @@ ul.sub-menu {
 
             p {
                 font-size:calc(var(--large-p) * .8);
+
+                @include phone {
+                    font-size:var(--large-p);
+                }
             }
 
             .button {
                 font-size:calc(var(--large-p) * .8);
+                padding-right:44px;
 
-                svg {
-                    margin-left:5px;
+                &:after {
+                    content:'';
+                    background: url(../../images/svg/arrowRightIcon.svg);
+                    width:18px;
+                    height:15px;
+                    position:absolute;
+                    margin:4px 8px;
                 }
+
             } 
     
         }    
 
-    }
+    
 
 }
 
@@ -253,6 +485,10 @@ ul.sub-menu {
     max-width:var(--site-width);
     margin:auto;
     padding:10vh var(--horizontal);
+
+    @include phone {
+        padding:var(--vertical) var(--horizontal);
+    }
     
     &:before {
         content:'';
@@ -265,27 +501,42 @@ ul.sub-menu {
         
         width:100%;
         height:100%;
+
+        @include phone {
+            display:none;
+        }
     }
 
     h1 {
-        width:15ch;
+        
         margin:0 0 30px 0;
+        font-size:calc(var(--x-large-title) * 1.2);
     }
     
     h2 {
-        width:25ch;
+        width:35ch;
         margin:30px 0 30px 0;
         color:$color;
-        font-size:var(--x-large-subtitle);
+        font-size:calc(var(--x-large-subtitle) * 1.1);
+
+        @include phone {
+            width:auto;
+            font-size:calc(var(--x-large-subtitle) * 0.9);
+        }
         
     }
 
-    .wp-block-quote {
+    blockquote.wp-block-quote {
         background:$color;
         color:$white;
         padding:var(--vertical) var(--horizontal);
         width:75ch;
         margin-bottom:30px;
+
+        @include phone {
+            width:auto;
+            padding:var(--vertical);
+        }
         
         p {
             font-size:var(--medium-subtitle);
@@ -297,8 +548,13 @@ ul.sub-menu {
 
     .wp-block-group {
         padding:5vh 25vw 0 0;
-        margin:0 0 5vh var(--horizontal);
+        margin:0 var(--horizontal) 5vh var(--horizontal);
         display:inline-block;
+
+        @include phone {
+            padding:5vh 0 0 0;
+            margin:0 0 5vh 0;
+        }
 
         &:before {
             display:none;
@@ -330,6 +586,10 @@ ul.sub-menu {
 
         .wp-block-quote {
             margin-left:calc(var(--horizontal) * -1);
+
+            @include phone {
+                margin-left:0;
+            }
         }
     }
    
@@ -347,6 +607,10 @@ ul.sub-menu {
 
 .wp-block-columns {
     display:flex;
+
+    @include phone {
+        flex-direction: column;
+    }
 
     .wp-block-column {
         margin-right:50px;
@@ -378,7 +642,10 @@ ul.sub-menu {
     justify-content: center;
 
     border-radius:10px;
-   
+
+    @include phone {
+        border-radius:0;
+    }   
 
     h1, h2, h3 {
         color:$white;
@@ -387,10 +654,23 @@ ul.sub-menu {
 
     h1 {
         width:20ch;
+
+        @include phone{
+            strong {
+                color:$white;
+                display:inline;
+            }
+
+            width:85%;
+        }
     }
 
     h2 {
         width:30ch;
+
+        @include phone{
+            display:none;
+        }
     }
     
 } 
@@ -409,8 +689,18 @@ ul.sub-menu {
     
     display:flex;
 
+    @include phone {
+        margin-top:var(--vertical);
+        width:calc(100vw - var(--horizontal) * 2);
+        flex-direction:column;
+    }
+
     .image {
         margin-right:50px;
+
+        @include phone {
+            margin:auto;
+        }
 
         img {
             width:200px;
@@ -432,6 +722,10 @@ ul.sub-menu {
             font-weight:600;
             color:$color;
             margin:0 0 15px 0;
+        }
+
+        @include phone {
+            text-align:center;
         }
 
         .email {
@@ -457,6 +751,10 @@ ul.sub-menu {
     width:40vw;
     background:$bgcolor;
     padding:var(--vertical) var(--horizontal);
+
+    @include phone {
+        width:100%;
+    }
 
     input {
         border-color:darken($bgcolor, 10%) !important;
@@ -498,7 +796,7 @@ ul.sub-menu {
 }
 
 
-/* ------------- Section ----------------------------------------------------------------------------------------------------------- */
+/* ------------- Coming Soon Page ----------------------------------------------------------------------------------------------------------- */
 
 
 .coming_soon_logo {
