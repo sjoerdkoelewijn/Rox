@@ -1454,14 +1454,43 @@ ul.sub-menu li.menu-item:first-child {
   }
 }
 
-/* line 598, src/sass/style.scss */
+/* line 597, src/sass/style.scss */
+.wp-block-group ul li, .wp-block-group ol li {
+  font-size: var(--large-p);
+  margin: 5px 0;
+}
+
+/* line 603, src/sass/style.scss */
+.wp-block-group ul {
+  list-style: none;
+}
+
+/* line 608, src/sass/style.scss */
+.wp-block-group ul li:before {
+  content: '';
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  margin-right: 10px;
+  background: url("../../images/svg/checkIcon.svg");
+  background-position: left 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* line 625, src/sass/style.scss */
+.wp-block-group ol li {
+  list-style-type: decimal;
+}
+
+/* line 632, src/sass/style.scss */
 .wp-block-group__inner-container {
   z-index: 1;
   position: relative;
 }
 
 /* ------------- Gutenberg Layout ----------------------------------------------------------------------------------------------------------- */
-/* line 608, src/sass/style.scss */
+/* line 642, src/sass/style.scss */
 .wp-block-columns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1469,7 +1498,7 @@ ul.sub-menu li.menu-item:first-child {
 }
 
 @media (min-width: 280px) and (max-width: 799px) {
-  /* line 608, src/sass/style.scss */
+  /* line 642, src/sass/style.scss */
   .wp-block-columns {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1478,18 +1507,18 @@ ul.sub-menu li.menu-item:first-child {
   }
 }
 
-/* line 615, src/sass/style.scss */
+/* line 649, src/sass/style.scss */
 .wp-block-columns .wp-block-column {
   margin-right: 50px;
 }
 
-/* line 619, src/sass/style.scss */
+/* line 653, src/sass/style.scss */
 .wp-block-columns .wp-block-column:last-child {
   margin-right: 0;
 }
 
 /* ------------- Gutenberg Hero image ----------------------------------------------------------------------------------------------------------- */
-/* line 627, src/sass/style.scss */
+/* line 661, src/sass/style.scss */
 .wp-block-cover {
   z-index: 1;
   position: relative;
@@ -1513,49 +1542,49 @@ ul.sub-menu li.menu-item:first-child {
 }
 
 @media (min-width: 280px) and (max-width: 799px) {
-  /* line 627, src/sass/style.scss */
+  /* line 661, src/sass/style.scss */
   .wp-block-cover {
     border-radius: 0;
   }
 }
 
-/* line 650, src/sass/style.scss */
+/* line 684, src/sass/style.scss */
 .wp-block-cover h1, .wp-block-cover h2, .wp-block-cover h3 {
   color: #ffffff;
   text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
 }
 
-/* line 655, src/sass/style.scss */
+/* line 689, src/sass/style.scss */
 .wp-block-cover h1 {
   width: 20ch;
 }
 
 @media (min-width: 280px) and (max-width: 799px) {
-  /* line 655, src/sass/style.scss */
+  /* line 689, src/sass/style.scss */
   .wp-block-cover h1 {
     width: 85%;
   }
-  /* line 659, src/sass/style.scss */
+  /* line 693, src/sass/style.scss */
   .wp-block-cover h1 strong {
     color: #ffffff;
     display: inline;
   }
 }
 
-/* line 668, src/sass/style.scss */
+/* line 702, src/sass/style.scss */
 .wp-block-cover h2 {
   width: 30ch;
 }
 
 @media (min-width: 280px) and (max-width: 799px) {
-  /* line 668, src/sass/style.scss */
+  /* line 702, src/sass/style.scss */
   .wp-block-cover h2 {
     display: none;
   }
 }
 
 /* ------------- Persoon contact block ----------------------------------------------------------------------------------------------------------- */
-/* line 680, src/sass/style.scss */
+/* line 714, src/sass/style.scss */
 .persoon {
   width: 33vw;
   background: #ffffff;
@@ -1572,7 +1601,7 @@ ul.sub-menu li.menu-item:first-child {
 }
 
 @media (min-width: 280px) and (max-width: 799px) {
-  /* line 680, src/sass/style.scss */
+  /* line 714, src/sass/style.scss */
   .persoon {
     margin-top: var(--vertical);
     width: calc(100vw - var(--horizontal) * 2);
@@ -1583,33 +1612,33 @@ ul.sub-menu li.menu-item:first-child {
   }
 }
 
-/* line 698, src/sass/style.scss */
+/* line 732, src/sass/style.scss */
 .persoon .image {
   margin-right: 50px;
 }
 
 @media (min-width: 280px) and (max-width: 799px) {
-  /* line 698, src/sass/style.scss */
+  /* line 732, src/sass/style.scss */
   .persoon .image {
     margin: auto;
   }
 }
 
-/* line 705, src/sass/style.scss */
+/* line 739, src/sass/style.scss */
 .persoon .image img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
 }
 
-/* line 714, src/sass/style.scss */
+/* line 748, src/sass/style.scss */
 .persoon .text h1 {
   font-size: var(--medium-subtitle);
   margin: 15px 0 0 0;
   width: auto;
 }
 
-/* line 720, src/sass/style.scss */
+/* line 754, src/sass/style.scss */
 .persoon .text h2 {
   font-size: var(--small-subtitle);
   font-weight: 600;
@@ -1618,26 +1647,26 @@ ul.sub-menu li.menu-item:first-child {
 }
 
 @media (min-width: 280px) and (max-width: 799px) {
-  /* line 713, src/sass/style.scss */
+  /* line 747, src/sass/style.scss */
   .persoon .text {
     text-align: center;
   }
 }
 
-/* line 731, src/sass/style.scss */
+/* line 765, src/sass/style.scss */
 .persoon .text .email {
   text-decoration: none;
   font-size: var(--large-p);
 }
 
-/* line 736, src/sass/style.scss */
+/* line 770, src/sass/style.scss */
 .persoon .text .telefoon {
   font-size: var(--large-p);
   margin: 10px 0 0 0;
 }
 
 /* ------------- Form Section ----------------------------------------------------------------------------------------------------------- */
-/* line 750, src/sass/style.scss */
+/* line 784, src/sass/style.scss */
 #wpforms-53, #wpforms-38 {
   width: 40vw;
   background: #EAF3F3;
@@ -1645,20 +1674,20 @@ ul.sub-menu li.menu-item:first-child {
 }
 
 @media (min-width: 280px) and (max-width: 799px) {
-  /* line 750, src/sass/style.scss */
+  /* line 784, src/sass/style.scss */
   #wpforms-53, #wpforms-38 {
     width: 100%;
   }
 }
 
-/* line 759, src/sass/style.scss */
+/* line 793, src/sass/style.scss */
 #wpforms-53 input, #wpforms-38 input {
   border-color: #cae0e0 !important;
   background-color: white !important;
   border-radius: 3px !important;
 }
 
-/* line 767, src/sass/style.scss */
+/* line 801, src/sass/style.scss */
 .wpforms-submit.button {
   border-radius: 5px !important;
   padding: 14px 22px !important;
@@ -1668,31 +1697,31 @@ ul.sub-menu li.menu-item:first-child {
   border: 0 !important;
 }
 
-/* line 775, src/sass/style.scss */
+/* line 809, src/sass/style.scss */
 .wpforms-submit.button:hover {
   background: #0E131F !important;
 }
 
-/* line 781, src/sass/style.scss */
+/* line 815, src/sass/style.scss */
 .wpforms-container-full {
   margin: 0 !important;
 }
 
-/* line 785, src/sass/style.scss */
+/* line 819, src/sass/style.scss */
 .wpforms-confirmation-container-full, div[submit-success] > .wpforms-confirmation-container-full:not(.wpforms-redirection-message) {
   background: none !important;
   border: 0 !important;
 }
 
 /* ------------- 404 page ----------------------------------------------------------------------------------------------------------- */
-/* line 793, src/sass/style.scss */
+/* line 827, src/sass/style.scss */
 .fourofour {
   margin-top: 10vh;
   text-align: center;
 }
 
 /* ------------- Coming Soon Page ----------------------------------------------------------------------------------------------------------- */
-/* line 802, src/sass/style.scss */
+/* line 836, src/sass/style.scss */
 .coming_soon_logo {
   width: 100vw;
   height: 100vh;
@@ -1707,7 +1736,7 @@ ul.sub-menu li.menu-item:first-child {
           justify-content: center;
 }
 
-/* line 809, src/sass/style.scss */
+/* line 843, src/sass/style.scss */
 .coming_soon_logo svg {
   width: 500px;
   height: 400px;

@@ -592,7 +592,41 @@ ul.sub-menu {
             }
         }
     }
-   
+ 
+    ul, ol {
+        li {
+            font-size:var(--large-p);
+            margin:5px 0;
+        }
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+
+            &:before {
+                content: '';
+                display: inline-block;
+                height: 1em;
+                width: 1em;
+                margin-right:10px;
+                background:url('../../images/svg/checkIcon.svg');
+                background-position: left 5px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            
+        }
+
+    }
+
+    ol {
+        li {
+            list-style-type: decimal;
+        }
+    }
+
 }
 
 .wp-block-group__inner-container {
