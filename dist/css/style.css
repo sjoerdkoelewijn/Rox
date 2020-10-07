@@ -1746,3 +1746,18 @@ ul.sub-menu li.menu-item:first-child {
   width: 500px;
   height: 400px;
 }
+
+/* ------------- Cookie melding ----------------------------------------------------------------------------------------------------------- */
+/* line 856, src/sass/style.scss */
+.pea_cook_wrapper p {
+  bottom: auto !important;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* line 862, src/sass/style.scss */
+.pea_cook_wrapper .button.pea_cook_btn {
+  background: #ffffff !important;
+  border: none !important;
+  font-family: "Poppins", sans-serif !important;
+}

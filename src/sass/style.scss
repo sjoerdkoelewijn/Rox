@@ -847,3 +847,21 @@ ul.sub-menu {
         height:400px;
     }
 }
+
+
+/* ------------- Cookie melding ----------------------------------------------------------------------------------------------------------- */
+
+.pea_cook_wrapper {
+
+    p {
+        bottom:auto !important;
+        font-family: $body-font !important;
+        font-weight:400 !important;
+    }
+
+    .button.pea_cook_btn {
+        background:$white !important;
+        border:none !important;
+        font-family: $body-font !important;
+    }
+}
