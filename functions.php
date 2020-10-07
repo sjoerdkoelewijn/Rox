@@ -126,3 +126,19 @@ add_theme_support( 'disable-custom-colors' );
 add_theme_support( 'editor-color-palette' );
 add_theme_support('editor-gradient-presets', []);
 add_theme_support('disable-custom-gradients', true);
+
+
+/*************************** Options Page *********************************/
+
+
+if( function_exists('acf_add_options_page') ) {
+	
+    acf_add_options_page(array(
+		'page_title' 	=> 'Theme Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+	
+}

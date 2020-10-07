@@ -3,7 +3,7 @@
 
 register_nav_menus( array(
 	'main-navigation' => __( 'Main Navigation', 'hashmuseum' ),	
-	'legal-links' => __( 'Legal Links', 'hashmuseum' ),
+	'footer-links' => __( 'Footer Links', 'hashmuseum' ),
 	'social-menu' => __( 'Social Menu', 'hashmuseum' ),
 ) );
 

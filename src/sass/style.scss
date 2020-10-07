@@ -510,7 +510,7 @@ ul.sub-menu {
     h1 {
         
         margin:0 0 30px 0;
-        font-size:calc(var(--x-large-title) * 1.2);
+        font-size:calc(var(--x-large-title) * 1.1);
     }
     
     h2 {
@@ -547,7 +547,7 @@ ul.sub-menu {
     }
 
     .wp-block-group {
-        padding:5vh 25vw 0 0;
+        padding:2vh 25vw 0 0;
         margin:0 var(--horizontal) 5vh var(--horizontal);
         display:inline-block;
 
@@ -866,4 +866,38 @@ ul.sub-menu {
     }
 
     
+}
+
+
+.footer {
+    margin:var(--vertical) var(--horizontal);
+    padding:var(--vertical) var(--horizontal);
+
+    background:$bgcolor;
+    line-height:180%; 
+    font-weight:400;
+    font-size:var(--large-p);
+
+    display:flex;
+    justify-content:space-between;
+
+    @include phone {
+        display:block;
+    }
+
+    a {
+        text-decoration:none;
+    }
+
+    .footer_links{
+        text-align:right;
+
+        @include phone {
+            margin-top:30px;
+            text-align:left;
+        }
+       
+    }
+
+
 }
