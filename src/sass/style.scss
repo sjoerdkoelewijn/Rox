@@ -857,11 +857,13 @@ ul.sub-menu {
         bottom:auto !important;
         font-family: $body-font !important;
         font-weight:400 !important;
+
+        .button.pea_cook_btn {
+            background:$white !important;
+            border:none !important;
+            font:400 12px $body-font !important; 
+        }
     }
 
-    .button.pea_cook_btn {
-        background:$white !important;
-        border:none !important;
-        font-family: $body-font !important;
-    }
+    
 }

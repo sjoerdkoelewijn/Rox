@@ -1755,9 +1755,9 @@ ul.sub-menu li.menu-item:first-child {
   font-weight: 400 !important;
 }
 
-/* line 862, src/sass/style.scss */
-.pea_cook_wrapper .button.pea_cook_btn {
+/* line 861, src/sass/style.scss */
+.pea_cook_wrapper p .button.pea_cook_btn {
   background: #ffffff !important;
   border: none !important;
-  font-family: "Poppins", sans-serif !important;
+  font: 400 12px "Poppins", sans-serif !important;
 }
