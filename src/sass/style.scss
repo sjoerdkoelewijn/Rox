@@ -870,8 +870,9 @@ ul.sub-menu {
 
 
 .footer {
-    margin:var(--vertical) var(--horizontal);
+    margin:var(--vertical) auto;
     padding:var(--vertical) var(--horizontal);
+    max-width:var(--site-width);
 
     background:$bgcolor;
     line-height:180%; 

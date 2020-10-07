@@ -1764,8 +1764,9 @@ ul.sub-menu li.menu-item:first-child {
 
 /* line 872, src/sass/style.scss */
 .footer {
-  margin: var(--vertical) var(--horizontal);
+  margin: var(--vertical) auto;
   padding: var(--vertical) var(--horizontal);
+  max-width: var(--site-width);
   background: #EAF3F3;
   line-height: 180%;
   font-weight: 400;
@@ -1785,18 +1786,18 @@ ul.sub-menu li.menu-item:first-child {
   }
 }
 
-/* line 888, src/sass/style.scss */
+/* line 889, src/sass/style.scss */
 .footer a {
   text-decoration: none;
 }
 
-/* line 892, src/sass/style.scss */
+/* line 893, src/sass/style.scss */
 .footer .footer_links {
   text-align: right;
 }
 
 @media (min-width: 280px) and (max-width: 799px) {
-  /* line 892, src/sass/style.scss */
+  /* line 893, src/sass/style.scss */
   .footer .footer_links {
     margin-top: 30px;
     text-align: left;
