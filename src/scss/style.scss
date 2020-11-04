@@ -673,6 +673,12 @@ button, .button, .wp-block-button__link {
                     width:100%;
                     object-fit: cover; 
                 }
+
+                .contain {
+                    img {
+                        object-fit: contain; 
+                    }
+                }
             }
         }
     }
