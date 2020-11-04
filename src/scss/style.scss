@@ -993,6 +993,10 @@ blockquote.wp-block-quote {
             @include desktop-s-up {
                 word-spacing: 100px;
             }
+
+            @include uhd {
+                word-spacing: 200px;
+            }
       
 
         }
