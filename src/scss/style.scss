@@ -372,7 +372,7 @@ button, .button, .wp-block-button__link {
         box-shadow: $box-shadow;
         border-radius:5px;
         
-        left: calc((100vw - var(--site-width)) / 2); 
+        left:0; 
         margin-top:30px;
     
         display:flex; 
