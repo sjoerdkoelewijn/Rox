@@ -3,10 +3,14 @@
 <?php get_header(); ?>
 
 	<?php while ( have_posts() ) : ?>
-		
-		<?php the_post(); ?>
 
-		<?php the_content(); ?>
+		<article class="content page">
+		
+			<?php the_post(); ?>
+
+			<?php the_content(); ?>
+
+		</article>
 
 	<?php endwhile; ?>
 
