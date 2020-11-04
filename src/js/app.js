@@ -45,7 +45,7 @@ const cookieSettingsAcceptBtn = document.querySelector('[data-cookie-settings-ac
 // Accept all cookies
 cookieAcceptBtn.onclick = function() { 
     cookieMessage.classList.remove('visible');
-    createCookie('gdpr-cookie', 'functional,analytics', 365);
+    createCookie('gdpr-cookie', 'functional,analytics,marketing', 365);
 };
 
 // Open cookie settings menu
