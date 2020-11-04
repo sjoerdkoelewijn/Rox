@@ -677,12 +677,11 @@ button, .button, .wp-block-button__link {
                     height:100%;
                     width:100%;
                     object-fit: cover; 
-                }
-
-                .contain {
-                    img {
-                        object-fit: contain; 
-                    }
+                }                
+            }
+            .wp-block-image.contain {
+                img {
+                    object-fit: contain; 
                 }
             }
         }
