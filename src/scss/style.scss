@@ -653,13 +653,18 @@ button, .button, .wp-block-button__link {
 
     .wp-block-image {
         width:var(--site-width);
-        height:50vh;
         border-radius:5px;
         overflow:hidden;
 
         img {
             width:100%;
         }
+
+
+    }
+
+    .wp-block-image.half {
+        height:50vh;
     }
 
     .wp-block-columns {
