@@ -519,7 +519,7 @@ button, .button, .wp-block-button__link {
     }
 
     @include phone {
-        background-position: top 0% right 43%;
+        background-position: top 0% right 43.5%;
         background-size: auto 100vh;
     }
 
@@ -534,7 +534,7 @@ button, .button, .wp-block-button__link {
 
         @include phone {
             max-width:100vw;
-            margin:50px calc((100vw - var(--site-width)) / 2);
+            margin:30px 0;
             padding:0;
             height:80vh;
             display:flex;
