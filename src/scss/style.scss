@@ -512,7 +512,7 @@ button, .button, .wp-block-button__link {
 
     .wp-block-group.hero {
         max-width:50vw;
-        margin:7vh calc(100vw - var(--site-width));
+        margin:0 calc(100vw - var(--site-width));
         min-height:80vh;
 
         @include phone {
