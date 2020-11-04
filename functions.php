@@ -30,6 +30,13 @@ add_theme_support( 'post-thumbnails' );
 add_theme_support( 'responsive-embeds' );
 add_post_type_support('page', 'excerpt');
 
+
+function cc_mime_types($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+  }
+  add_filter('upload_mimes', 'cc_mime_types');
+
 /*************************** Remove wordpress functionality **********************************/
 
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
