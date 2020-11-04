@@ -1,0 +1,9 @@
+
+@mixin sepa-up($color) {
+    width:100vw;
+    height:100px;
+    display:block;
+    mask: url(../../images/svg/sepa-up.svg);
+    mask-size: cover;
+    background-color: #{$color};
+}

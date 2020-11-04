@@ -2,7 +2,7 @@
 
     <?php while ( have_posts() ) : ?>
         
-        <article class="content page">
+        <article class="content kennisbank">
 
             <h1>
                 <?php the_title(); ?>
@@ -18,3 +18,4 @@
 	<?php endwhile; ?>
 
 <?php get_footer();
+
