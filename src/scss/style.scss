@@ -762,6 +762,11 @@ button, .button, .wp-block-button__link {
 }
 
 .home {
+    .wp-block-group {
+        padding: 10vh calc((100vw - var(--site-width)) / 2);
+
+    }
+
     h1 {
         padding:0;
 
