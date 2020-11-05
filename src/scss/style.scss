@@ -706,6 +706,10 @@ button, .button, .wp-block-button__link {
             .wp-block-image {
                 height:100%;
                 width:100%;
+                
+                @include phone {
+                    margin-bottom:30px;
+                }
 
                 img {
                     height:100%;
@@ -1308,15 +1312,11 @@ div.wpforms-container-full {
 /* ------------- Footer ----------------------------------------------------------------------------------------------------------- */
 
 
-.footer_sepa {
-    @include sepa-up($dark); 
-    margin:-120px 0 0 0;
-}
 
 .footer {
     background:$dark;    
     width:100vw;
-    //margin:-100px 0 0 0;
+    margin-top:var(--vertical);
 
     .footer_inner {        
         margin:0 auto;

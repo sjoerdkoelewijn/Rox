@@ -1,6 +1,5 @@
 
-		<span class=footer_sepa></span>
-		
+	
 		<div class="footer">
 
 			<div class="footer_inner">
