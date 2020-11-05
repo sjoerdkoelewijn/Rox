@@ -387,10 +387,10 @@ button, .button, .wp-block-button__link {
     
         @include desktop-s-up {
             padding:40px 20px 200px 40px;
-            min-height:500px;
+            min-height:clamp(500px, 50vh, 1080px);
             
         }
-     
+           
     
         li.menu-item.text_ad {
             position:absolute;
@@ -419,12 +419,20 @@ button, .button, .wp-block-button__link {
             width:447px;
             height:400px;
     
-            background:url(../../images/menu-banner.jpg) no-repeat;
+            background:url(../../images/menu-banner.jpg) ;
+
+            background-repeat:no-repeat;
+            background-size:cover;
     
             padding:170px 30px 30px 30px;
     
             @include desktop-up {
                 display:block;
+            }
+
+            @include uhd {
+                width:600px;
+                height:550px;
             }
     
             a {
@@ -433,12 +441,20 @@ button, .button, .wp-block-button__link {
                 text-transform:uppercase;
                 line-height:135%;
                 font-weight:800;
+                position:absolute;
+                bottom:30px;
+
+                @include uhd {
+                    bottom:40px;
+                }
+               
     
                 .link {
                     font-size:var(--large-p);
                     display:block;
                     text-transform:lowercase;
                     font-weight:600;
+                    color:$actioncolor;
     
                     &:before {
                         content:'';
@@ -645,8 +661,8 @@ button, .button, .wp-block-button__link {
 .content {
     padding:10vh calc((100vw - var(--site-width)) / 2) 0 calc((100vw - var(--site-width)) / 2);
 
-    .wp-block-group.intro {
-        padding:2vh clamp(50px, 20vw, 500px);
+    .wp-block-group, .wp-block-group.intro {
+        padding:2vh clamp(50px, 16vw, 500px);
         
         @include phone {
             padding:0;
@@ -663,7 +679,7 @@ button, .button, .wp-block-button__link {
     }
 
     h1 {
-        padding:2vh clamp(50px, 20vw, 500px);
+        padding:2vh clamp(50px, 16vw, 500px);
         margin-bottom:0;
 
         @include phone {
@@ -686,22 +702,40 @@ button, .button, .wp-block-button__link {
     }
 
     .wp-block-image {
-        width:var(--site-width);
+        width:calc(var(--site-width) - 10vw);
+        margin:0 auto;
         border-radius:5px;
         overflow:hidden;
+        height:50vh;        
 
         img {
             width:100%;
+            object-fit: cover; 
         }
 
-
     }
 
-    .wp-block-image.half {
-        height:50vh;
+    .wp-block-group {
+
+        .wp-block-image {
+            width:100%;
+            margin:0 auto;
+            border-radius:5px;
+            height:auto;
+             
+    
+            img {
+                width:100%;
+                height:100%;
+                object-fit: contain;
+            }
+    
+        }
     }
+    
 
     .wp-block-columns {
+
         .wp-block-column {
             .wp-block-image {
                 height:100%;
@@ -741,7 +775,7 @@ button, .button, .wp-block-button__link {
 /* ------------- Gutenberg Blocks ----------------------------------------------------------------------------------------------------------- */
 
 .wp-block-group {
-    padding:10vh calc((100vw - var(--site-width)) / 2);
+    //padding:10vh calc((100vw - var(--site-width)) / 2);
     margin:0 auto; 
     display:block; 
 
@@ -842,8 +876,7 @@ button, .button, .wp-block-button__link {
 
 .wp-block-group.background_white {
     background:$white;
-    padding-top:clamp(70px, 5vh, 200px);
-    padding-bottom:clamp(70px, 5vh, 200px);
+    padding:clamp(70px, 10vh, 200px) clamp(50px, 10vw, 500px) clamp(70px, 5vh, 200px) clamp(50px, 10vw, 500px);
 }
 
 .has-text-align-left {
@@ -907,7 +940,7 @@ blockquote.wp-block-quote {
 .wp-block-group {
 
     .wp-block-columns {
-        padding:0 clamp(30px, 20vw, 200px);
+        padding:0;
 
         @include phone {
             padding:0;
@@ -1240,33 +1273,38 @@ blockquote.wp-block-quote {
 /* ------------- Form Section ----------------------------------------------------------------------------------------------------------- */
 
 div.wpforms-container-full {
-    width:40vw;
+    width:clamp(320px, 40vw, 600px) !important;
     background:$bgcolor;
+    border-radius:5px;
     padding:var(--vertical) var(--horizontal);
 
     @include phone {
         width:100%;
     }
 
-    input {
+    input, select {
         border-color:darken($bgcolor, 10%) !important;
         background-color:lighten($bgcolor, 10%) !important;
         border-radius:3px !important;
+        width:100% !important;
+        max-width:100% !important;
+        color:$dark !important;
     }
 }
 
 
 
 .wpforms-submit.button {
-    border-radius:5px !important;
-    padding:14px 22px !important;
+    border-radius:50px !important;
+    padding:12px 30px !important;
     text-decoration:none;
     background:$color !important;
-    color:$white !important;
+    color:$dark !important;
     border:0 !important;
 
     &:hover {
         background:$dark !important;
+        color:$white !important;
     }
     
 }
