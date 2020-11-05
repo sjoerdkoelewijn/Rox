@@ -25,7 +25,7 @@
 
     <?php if ( is_front_page() && has_post_thumbnail() ) { 
         
-        $hero = 'style="background-image:url('. esc_attr( $attachment_image ) .');" ';
+        $hero = ' style="background-image:url('. esc_attr( $attachment_image ) .');"';
         
     } ?>
 
