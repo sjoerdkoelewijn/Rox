@@ -8,7 +8,7 @@
 
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
         <!-- Google Tag Manager -->
             <script defer>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
