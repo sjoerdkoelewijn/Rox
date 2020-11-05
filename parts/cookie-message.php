@@ -68,7 +68,7 @@
             </div> 
           
 
-            <button type="submit small" class="button" data-cookie-settings-accept-btn>
+            <button type="submit" class="button small" data-cookie-settings-accept-btn>
                 <?php _e('Opslaan', 'roxtar'); ?>
             </button>
             

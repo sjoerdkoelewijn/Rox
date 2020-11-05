@@ -1,6 +1,6 @@
     <div class="main_menu_wrap">
 
-        <nav id="main-navigation" class="main_navigation" role="navigation">
+        <nav id="main-navigation" class="main_navigation" data-main-menu>
             <?php
             wp_nav_menu(array(
                 'theme_location'  => 'main-navigation',
@@ -42,7 +42,7 @@
             <?php echo file_get_contents(get_template_directory() . "/images/svg/closeIcon.svg"); ?>
         </button>
         
-        <nav id="main-navigation" class="mobile_main_navigation" role="navigation">
+        <nav id="main-navigation-mobile" class="mobile_main_navigation">
             <?php
             wp_nav_menu(array(
                 'theme_location'  => 'main-navigation',

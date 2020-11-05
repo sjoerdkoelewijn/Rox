@@ -29,6 +29,7 @@ add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'responsive-embeds' );
 add_post_type_support('page', 'excerpt');
+add_theme_support( 'html5', [ 'script', 'style' ] );
 
 
 function cc_mime_types($mimes) {

@@ -21,16 +21,11 @@ mainClose.forEach(function(elem) {
 });
 
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    // The submenu is hidden with CSS to prevent it showing on pageload. This unhides it on domready
-    document.getElementsByClassName('sub-menu').style.display = 'block';
-});
-
-
-
 
 
 /******************* GDPR Cookies *************************************/
+
+
 
 const cookieMessage = document.querySelector('[data-cookie-message]');
 const cookieAcceptBtn = document.querySelector('[data-cookie-accept-btn]');
@@ -42,51 +37,55 @@ const cookieSettingsAcceptBtn = document.querySelector('[data-cookie-settings-ac
 
 /* --- Cookie Buttons --- */
 
-// Accept all cookies
-cookieAcceptBtn.onclick = function() { 
-    cookieMessage.classList.remove('visible');
-    createCookie('gdpr-cookie', 'functional,analytics,marketing', 365);
-};
+document.addEventListener('DOMContentLoaded', (event) => {
 
-// Open cookie settings menu
-cookieSettingsBtn.onclick = function() { 
-    cookieSettingsMessage.classList.add('visible');
-    cookieMessage.classList.remove('visible');
-};
+    // Accept all cookies
+    cookieAcceptBtn.onclick = function() { 
+        cookieMessage.classList.remove('visible');
+        createCookie('gdpr-cookie', 'functional,analytics,marketing', 365);
+    };
 
-// Save cookie settings
-cookieSettingsAcceptBtn.onclick = function() {     
-    
-    var array = [];
-    var checkboxes = cookieSettingsForm.querySelectorAll('input[type=checkbox]:checked');
+    // Open cookie settings menu
+    cookieSettingsBtn.onclick = function() { 
+        cookieSettingsMessage.classList.add('visible');
+        cookieMessage.classList.remove('visible');
+    };
 
-    // Buidl array with checkboxes
-    for (var i = 0; i < checkboxes.length; i++) {
-      array.push(checkboxes[i].value);
+    // Save cookie settings
+    cookieSettingsAcceptBtn.onclick = function() {     
+        
+        var array = [];
+        var checkboxes = cookieSettingsForm.querySelectorAll('input[type=checkbox]:checked');
+
+        // Buidl array with checkboxes
+        for (var i = 0; i < checkboxes.length; i++) {
+        array.push(checkboxes[i].value);
+        }
+
+        // Save cookie with settings
+        createCookie('gdpr-cookie', array, 365);
+
+        // Hide cookie settings menu 
+        cookieSettingsMessage.classList.remove('visible');
+        
+        // Stop form 
+        return false;
+    };
+
+    /* --- Get cookie value --- */
+
+    const getGDPRCookie = getCookie('gdpr-cookie');
+
+    // If GDPR cookie is empty or not set -> add class visible
+    if ( getGDPRCookie === '') {
+        cookieMessage.classList.add('visible');
     }
 
-    // Save cookie with settings
-    createCookie('gdpr-cookie', array, 365);
+    // Check if consent has been given before you load.
+    // if ( getGDPRCookie.includes('functional,analytics') ) {} 
 
-    // Hide cookie settings menu 
-    cookieSettingsMessage.classList.remove('visible');
-    
-    // Stop form 
-    return false;
-};
 
-/* --- Get cookie value --- */
-
-const getGDPRCookie = getCookie('gdpr-cookie');
-
-// If GDPR cookie is empty or not set add class visible
-if ( getGDPRCookie === '') {
-    cookieMessage.classList.add('visible');
-}
-
-// Check if consent has been given before you load.
-// if ( getGDPRCookie.includes('functional,analytics') ) {} 
-
+});
 
 /* --- GDPR Cookie Functions --- */
 

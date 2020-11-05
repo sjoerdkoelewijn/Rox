@@ -1,7 +1,7 @@
 
 		<span class=footer_sepa></span>
 		
-		<article class="footer">
+		<div class="footer">
 
 			<div class="footer_inner">
 		
@@ -17,7 +17,7 @@
 				
 				</div>
 
-				<nav id="footer-services" class="footer_services" role="navigation">
+				<nav id="footer-services" class="footer_services">
 
 					<?php
 					wp_nav_menu(array(
@@ -42,7 +42,7 @@
 				
 				</div>
 
-				<nav id="footer-links" class="footer_links" role="navigation">
+				<nav id="footer-links" class="footer_links">
 
 					<?php
 					wp_nav_menu(array(
@@ -57,7 +57,7 @@
 
 			</div>
 
-		</article>
+		</div>
 
 		<?php include('parts/cookie-message.php'); ?>
 
