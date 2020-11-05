@@ -23,17 +23,17 @@
 
     </head>
 
-    <?php if ( is_front_page() && has_post_thumbnail() ) { 
-        
-        $hero = ' style="background-image:url('. esc_attr( $attachment_image ) .');"';
-        
-    } ?>
-
-    <body <?php if (is_front_page() && has_post_thumbnail() ) {  echo $hero . body_class('hero_image'); } else { body_class(); } ?> >
+    <body <?php if (is_front_page() && has_post_thumbnail() ) { body_class('hero_image'); } else { body_class(); } ?> >
 
         <!-- Google Tag Manager (noscript) -->
             <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCPKGSW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
+
+        <?php if ( is_front_page() && has_post_thumbnail() ) { 
+            
+            echo '<img alt="Roxtar Online Marketing Bureau Amsterdam" loading="lazy" class="bg_hero_img" src="'. esc_attr( $attachment_image ) .'" />';
+            
+        } ?>
 
         <header class="top_header">
 

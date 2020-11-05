@@ -21,11 +21,7 @@ mainClose.forEach(function(elem) {
 });
 
 
-
-
 /******************* GDPR Cookies *************************************/
-
-
 
 const cookieMessage = document.querySelector('[data-cookie-message]');
 const cookieAcceptBtn = document.querySelector('[data-cookie-accept-btn]');
@@ -43,12 +39,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
     cookieAcceptBtn.onclick = function() { 
         cookieMessage.classList.remove('visible');
         createCookie('gdpr-cookie', 'functional,analytics,marketing', 365);
+
+        location.reload();
+        return false;
+ 
     };
 
     // Open cookie settings menu
     cookieSettingsBtn.onclick = function() { 
         cookieSettingsMessage.classList.add('visible');
         cookieMessage.classList.remove('visible');
+
+        location.reload();
+        return false;
     };
 
     // Save cookie settings
@@ -67,7 +70,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         // Hide cookie settings menu 
         cookieSettingsMessage.classList.remove('visible');
-        
+       
         // Stop form 
         return false;
     };
@@ -81,26 +84,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         cookieMessage.classList.add('visible');
     }
 
-    if ( getGDPRCookie != '') {
-
-        // Only load google tag manager if GDPR cookie is not empty.
-
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-KCPKGSW');
-        
-    }
-
-    
-
-
-
 
     // Check if consent has been given before you load.
     // if ( getGDPRCookie.includes('functional,analytics') ) {} 
 
+    // Load GTM on domReady
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KCPKGSW');
+     
 
 });
 
