@@ -1071,13 +1071,16 @@ blockquote.wp-block-quote {
 
     .faq {
      
-        h2 {
+        h2.marker {
+            
             font-size:calc(var(--x-large-title) * 1.3);
             line-height:120%;
             font-weight:900;
             
             @include desktop-s-up {
                 word-spacing: 100px;
+                max-width:200px;
+                margin-left:10vw;
             }
 
             @include uhd {
