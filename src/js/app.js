@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         cookieMessage.classList.remove('visible');
         createCookie('gdpr-cookie', 'functional,analytics,marketing', 365);
 
+        // Reload page when cookies are accepted.
         location.reload();
         return false;
  
@@ -48,10 +49,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Open cookie settings menu
     cookieSettingsBtn.onclick = function() { 
         cookieSettingsMessage.classList.add('visible');
-        cookieMessage.classList.remove('visible');
-
-        location.reload();
-        return false;
+        cookieMessage.classList.remove('visible');        
     };
 
     // Save cookie settings
@@ -70,6 +68,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         // Hide cookie settings menu 
         cookieSettingsMessage.classList.remove('visible');
+        
+        // Reload page when cookie settings are saved.
+        location.reload();
        
         // Stop form 
         return false;
@@ -79,13 +80,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     const getGDPRCookie = getCookie('gdpr-cookie');
 
-    // If GDPR cookie is empty or not set -> add class visible
+    // If GDPR cookie is empty or not set -> add class visible to cookie popup
     if ( getGDPRCookie === '') {
         cookieMessage.classList.add('visible');
     }
 
 
-    // Check if consent has been given before you load GTM.
+    // Check if consent has been given before GTM is loaded. Triggers in GTM load content based on cookie value.
     if ( getGDPRCookie.includes('analytics', 'analytics,marketing') ) {
         
         (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
