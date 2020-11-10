@@ -9,10 +9,19 @@
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0" />
+        <title><?php wp_title( '|', true, 'right' ); ?></title>
 
         <link rel="profile" href="http://gmpg.org/xfn/11">
-        <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="anonymous">
+        <link rel="pingback" href="<?php echo esc_url( get_bloginfo( 'pingback_url' ) ); ?>">
+        <link rel="preconnect" href="http://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="anonymous" >
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        <link rel="preconnect" href="https://stats.g.doubleclick.net" />
+        <link rel="dns-prefetch" href="//stats.g.doubleclick.net" />
+
        
         <?php wp_head(); ?>
 
