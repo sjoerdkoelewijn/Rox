@@ -25,9 +25,33 @@ button, .button, .wp-block-button__link {
         margin:5px 5px 0 0;        
     }
 
+    a {
+        text-decoration:none;
+    }
+
     @include phone {
         padding:12px 25px;
     }
+}
+
+.read_more_btn {
+    font-size:var(--large-p);
+    font-weight:600;
+    display: flex;
+
+    &:before {
+        content:'';
+        mask: url('../../images/svg/roundArrowRight.svg');
+        background:$color;
+        
+        width:24px;
+        height:24px;
+        margin-right:10px;
+        margin-top:2px;
+        transition: background-color .5s ease, color .5s ease;
+        
+    }
+
 }
 
 .button.small {
@@ -40,6 +64,7 @@ button, .button, .wp-block-button__link {
 
     &:hover {
         background:$dark;
+
     }
     
 }
@@ -933,11 +958,6 @@ blockquote.wp-block-quote {
 
 
 
-.home {
-
-
-
-}
 
 
 /* ------------- Gutenberg Columns ------------------------------ */
@@ -1335,26 +1355,6 @@ div.wpforms-container-full {
 }
 
 
-/* ------------- Cookie melding ----------------------------------------------------------------------------------------------------------- */
-
-.pea_cook_wrapper {
-
-    p {
-        bottom:auto !important;
-        font-family: $body-font !important;
-        font-weight:400 !important;
-
-        .button.pea_cook_btn {
-            background:$white !important;
-            border:none !important;
-            font:400 12px $body-font !important; 
-        }
-    }
-
-    
-}
-
-
 /* ------------- Footer ----------------------------------------------------------------------------------------------------------- */
 
 
@@ -1579,6 +1579,7 @@ div.wpforms-container-full {
             width:100vw;
             right:0;
             left:0;
+            border-radius:0;
         }
 
         @include desktop-s {
@@ -1640,3 +1641,145 @@ div.wpforms-container-full {
 .cookie_message.visible {
     display:block;
 } 
+
+
+
+/* ------------- Kennisbank Archive ----------------------------------------------------------------------------------------------------------- */
+
+.post-type-archive {
+
+    .archive_header {
+        text-align: center;
+        padding:clamp(50px, 5vh, 200px) clamp(50px, 5vw, 200px);
+
+        &:after {
+            content:'';
+            background:$color;
+            width:75px;
+            height:10px;
+            display:block;
+            margin:20px auto;
+        }
+
+    }
+
+    .content {
+        padding-top:0;
+
+        .post {
+            margin:clamp(20px, 8vh, 100px) auto;
+            width:clamp(300px, var(--site-width), 1200px);
+            display:flex;
+                    
+            &:nth-child(even) {
+                flex-direction: row;
+
+                @include phone {
+                    flex-direction: column-reverse;
+                }
+                
+                .text {
+                    padding:20px 40px 0 20px; 
+    
+                    @include phone {
+                        padding:30px 10px;
+                    }
+                }
+    
+                .image {
+                    margin-left:50px;
+    
+                    @include phone {
+                        margin:0;
+                    }
+                }
+            }
+    
+            &:nth-child(odd) {
+                flex-direction: row-reverse;
+
+                @include phone {
+                    flex-direction: column-reverse;
+                }
+    
+                .text {
+                    padding:20px 20px 30px 40px; 
+    
+                    @include phone {
+                        padding:30px 10px;
+                    }
+                }
+    
+                .image {
+                    margin-right:50px;
+    
+                    @include phone {
+                        margin:0;
+                    }
+                }
+            }
+    
+            a {
+                text-decoration:none;
+            }
+    
+            .text {
+                width:clamp(300px, 50%, 1200px);
+              
+            }
+    
+            .image {
+                width:clamp(300px, 50%, 1200px);
+    
+                img {
+                    width:100%;
+                    height:100%;
+                    border-radius:5px;
+                }
+            }
+        }
+
+    }
+
+ 
+
+
+}
+
+
+.next_posts_btn_wrap {            
+    display: flex;
+    align-items: center;  
+    justify-content: center;    
+    
+    a {
+        font-weight: 600;
+        font-size: var(--large-p);
+
+        margin:clamp(30px, 5vh, 200px) 20px; 
+        display:inline-block;
+        
+        border-radius:50px;
+        padding:16px 30px;
+        text-decoration:none;
+        cursor: pointer;
+
+        background:$color;
+        color:$dark;
+        transition: background-color .5s ease, color .5s ease;
+        
+        &:hover {
+            transition: background-color .5s ease, color .5s ease;
+            background:$dark;
+            color:$white;
+        }
+
+        &:visited{
+            color:$dark;
+        }
+
+        &:visited:hover {
+            color:$white;
+        }
+    }
+}

@@ -22,12 +22,14 @@ html {
   background:$light;
 }
 
+
+
 a {
   color:$dark;
-  //transition: color .5s ease;
+  transition: color .5s ease;
 
   &:hover {
-    //transition: color .5s ease;
+    transition: color .5s ease;
     color:$color;
   }
 
@@ -112,8 +114,17 @@ button, .button, .wp-block-button__link {
     color:$white;
   }
 
-}
+  a {
+    color:$dark;    
+  }
 
+  &:hover {
+    a {
+      color:$white;
+    }
+  }
+
+}
 
 .wp-block-button.is-style-outline {
   .wp-block-button__link {

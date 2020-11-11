@@ -27,9 +27,6 @@
 
     <body <?php if (is_front_page() && has_post_thumbnail() ) { body_class('hero_image'); } else { body_class(); } ?> >
 
-        <!-- Google Tag Manager (noscript) -->
-            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCPKGSW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
 
         <?php if ( is_front_page() && has_post_thumbnail() ) { 
             
