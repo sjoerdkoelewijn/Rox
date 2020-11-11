@@ -10,11 +10,11 @@ $header-font:'Poppins', sans-serif;
 
     --x-large-title:clamp( 2.3rem, 3vw, 20rem);
     --large-title:clamp( 1.8rem, 2.5vw, 20rem);
-    --medium-title:2vw;
+    --medium-title:clamp( 1.8rem, 2vw, 20rem);
     --small-title:1.5vw;
 
-    --x-large-subtitle:clamp( 1.6rem, 1.75vw, 17rem);
-    --large-subtitle:clamp( 1.3rem, 1.50vw, 15rem) ;
+    --x-large-subtitle:clamp( 1.8rem, 1.75vw, 17rem);
+    --large-subtitle:clamp( 1.6rem, 1.50vw, 15rem) ;
     --medium-subtitle:clamp( 1.2rem, 1.25vw, 12rem);
     --small-subtitle:clamp( 20px, 1.1vw, 48px);
 

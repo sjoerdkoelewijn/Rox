@@ -25,8 +25,7 @@
 
     </head>
 
-    <body <?php if (is_front_page() && has_post_thumbnail() ) { body_class('hero_image'); } else { body_class(); } ?> >
-
+    <body <?php if (is_front_page() && has_post_thumbnail() ) { body_class('has_hero'); } else { body_class(); } ?> >
 
         <?php if ( is_front_page() && has_post_thumbnail() ) { 
             

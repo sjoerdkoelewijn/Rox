@@ -4,7 +4,7 @@
         
         <article class="content page">
 
-            <h1>
+            <h1 class="page_header">
                 <?php the_title(); ?>
             </h1>
             
