@@ -39,7 +39,7 @@
             <?php // the_posts_pagination(); ?>
 
             <div class="next_posts_btn_wrap">
-                <?php next_posts_link('Load more'); ?>
+                <?php next_posts_link('Volgende pagina'); ?>
             </div>
 
         <?php else : ?>
