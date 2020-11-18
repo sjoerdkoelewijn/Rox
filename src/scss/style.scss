@@ -554,7 +554,7 @@ button, .button, .wp-block-button__link {
         max-width:45vw;
         margin:10vh 0 0 15vw;
         min-height:80vh;
-        padding-top:3vh;
+        padding-top:3vh;        
 
         @include tablet{
             max-width:60vw;
@@ -595,12 +595,12 @@ button, .button, .wp-block-button__link {
         }    
         
 
-        h1, p {
+        .header, p {
             color:$white;
             text-shadow: 3px 3px 3px rgba(25, 65, 117, 0.1);
         }
 
-        h1 {        
+        .header {        
             margin:0 0 10px 0;
             font-size:calc(var(--x-large-title) * 1.5);
             line-height:120%;
