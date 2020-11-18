@@ -572,7 +572,7 @@ button, .button, .wp-block-button__link {
                 content:'';
                 background:rgba($dark, .3);
                 position:absolute;
-                min-height:calc(100vh);
+                min-height:calc(100vh + 45px);
                 top:0;
                 left:0;
                 right:0;
