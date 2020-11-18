@@ -34,10 +34,6 @@
 
     <div class="mobile_menu hidden" data-main-menu>
 
-        <a title="<?php bloginfo( 'name' ); ?>" aria-label="Visit the Homepage" class="logo" href="/">
-            <?php echo file_get_contents(get_template_directory() . "/images/svg/logo.svg"); ?>
-        </a>
-
         <button class="menu_close" data-main-close>
             <?php echo file_get_contents(get_template_directory() . "/images/svg/closeIcon.svg"); ?>
         </button>
