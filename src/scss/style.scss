@@ -698,6 +698,11 @@ button, .button, .wp-block-button__link {
         }
     }
 
+    .wp-block-group {
+        width:auto;
+        
+    }
+
 }
 
 .wp-block-columns.usp {
@@ -705,7 +710,7 @@ button, .button, .wp-block-button__link {
 }
 
 .wp-block-columns.intro {
-    margin: clamp(50px, 15vh, 200px) auto;
+    margin: clamp(50px, 15vh, 200px) auto clamp(30px, 10vh, 150px) auto;
 }
 
 
@@ -752,6 +757,23 @@ button, .button, .wp-block-button__link {
         }
     }
 
+}
+
+.schema-faq {
+    margin: clamp(20px, 8vh, 100px) auto;
+    width: clamp(300px, var(--site-width), 1200px);
+
+    background:$white;
+    padding:clamp(30px, 6vw, 100px);
+    border-radius:5px;
+}
+
+.faq {
+    .schema-faq {
+        width:auto;
+        margin:0;
+        padding:0;
+    }
 }
 
 
@@ -968,17 +990,82 @@ blockquote.wp-block-quote {
     }
 }
 
+.website_check_form {
+    margin-top:clamp(-30px, -2.5vw, -60px) ;
+    background:$color;
+    padding:clamp(30px, 2.5vw, 60px);
+    border-radius: 5px;
+
+    h2, p {
+        margin:10px 0;
+    }
+
+    .wpforms-container-full {
+        input {
+            background:#C9FFE2 !important;
+            border:1px solid #6FE2A4 !important;
+        }
+
+        .button {
+            margin-top:20px;
+            margin-bottom:30px;
+            background:$dark !important;
+            color:$white !important;
+            transition: background-color .5s ease, color .5s ease;
+
+            &:hover {
+                background:$white !important;
+                color:$dark !important; 
+                transition: background-color .5s ease, color .5s ease; 
+            }
+        }
+    }
+    
+}
+
+.wp-block-columns {
+    .wp-block-column.website_check_form {
+        h2 {
+            margin-top:0;
+        }
+    }  
+}
+
 
 .intro {
 
     h1 {
-        font-size:calc(var(--x-large-title) * 1.2);
+        font-size:var(--x-large-title);
         line-height:120%;
         font-weight:900;
     }
 
     p {
-        font-size:calc(var(--large-p) * 1.15); 
+        font-size:calc(var(--large-p) * 1.1); 
+    }
+
+    ul {
+        list-style: none;
+        margin:0 0 30px 0;
+
+        li {
+            margin:10px 0;
+            font-size:calc(var(--large-p) * 1.1);
+
+            &:before {
+                content: '';
+                display: inline-block;
+                height: 1em;
+                width: 1em;
+                margin-right:10px;
+                background:url('../../images/svg/checkIcon.svg');
+                background-position: left 5px;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            
+        }
+
     }
 
 } 
@@ -1042,9 +1129,17 @@ blockquote.wp-block-quote {
 .usp {
     padding-top:50px;
 
+    p {
+        padding:0 15px;
+    }
+
+    h3 {
+        margin:0 0 10px 0;
+    }
+
     .usp_1 {
         padding-top:130px;
-
+        margin:0;
         background:url('../../images/svg/uspCallIcon.svg');
         background-position: center 5px;
         background-repeat: no-repeat;
@@ -1052,7 +1147,7 @@ blockquote.wp-block-quote {
     
     .usp_2 {
         padding-top:130px;
-
+        margin:0;
         background:url('../../images/svg/uspMetricIcon.svg');
         background-position: center 5px;
         background-repeat: no-repeat;
@@ -1060,7 +1155,7 @@ blockquote.wp-block-quote {
 
     .usp_3 {
         padding-top:130px;
-
+        margin:0;
         background:url('../../images/svg/uspGlassIcon.svg');
         background-position: center 5px;
         background-repeat: no-repeat;
@@ -1207,10 +1302,10 @@ blockquote.wp-block-quote {
 /* ------------- Form Section ----------------------------------------------------------------------------------------------------------- */
 
 div.wpforms-container-full {
-    width:clamp(320px, 40vw, 600px) !important;
-    background:$bgcolor;
-    border-radius:5px;
-    padding:var(--vertical) var(--horizontal);
+    //width:clamp(320px, 40vw, 600px) !important;
+    //background:$bgcolor;
+    //border-radius:5px;
+    //padding:var(--vertical) var(--horizontal);
 
     @include phone {
         width:100% !important;
@@ -1219,8 +1314,9 @@ div.wpforms-container-full {
     input, select {
         border-color:darken($bgcolor, 10%) !important;
         background-color:lighten($bgcolor, 10%) !important;
-        border-radius:3px !important;
+        border-radius:5px !important;
         width:100% !important;
+        height:48px !important;
         max-width:100% !important;
         color:$dark !important;
     }
