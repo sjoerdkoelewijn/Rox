@@ -572,7 +572,7 @@ button, .button, .wp-block-button__link {
                 content:'';
                 background:rgba($dark, .3);
                 position:absolute;
-                min-height:calc(100vh + 45px);
+                min-height:calc(100vh);
                 top:0;
                 left:0;
                 right:0;
@@ -972,7 +972,7 @@ blockquote.wp-block-quote {
 .intro {
 
     h1 {
-        font-size:calc(var(--x-large-title) * 1.3);
+        font-size:calc(var(--x-large-title) * 1.2);
         line-height:120%;
         font-weight:900;
     }
@@ -1442,6 +1442,13 @@ div.wpforms-container-full {
                 font-weight:200;
                 font-size:var(--medium-p);
                 color:$white;
+                
+                @include phone {
+                    display:block;
+                    width:90vw;
+                    margin:5px 0;
+                }
+
                 
                 &:visited {
                     color:$white;
