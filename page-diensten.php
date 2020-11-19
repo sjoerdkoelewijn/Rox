@@ -1,4 +1,4 @@
-<?php /* Template Name: No Header */ ?>
+<?php /* Template Name: Diensten */ ?>
 
 <?php get_header(); ?>
 

@@ -666,7 +666,7 @@ button, .button, .wp-block-button__link {
 
 .wp-block-group {
     margin: clamp(20px, 8vh, 100px) auto;
-    width: clamp(300px, var(--site-width), 1200px);
+    width: clamp(300px, var(--site-width), var(--max-site-width));
 }
 
 .wp-block-group.background_white {
@@ -676,7 +676,7 @@ button, .button, .wp-block-button__link {
 
 .wp-block-columns {
     margin: clamp(20px, 8vh, 100px) auto;
-    width: clamp(300px, var(--site-width), 1200px);
+    width: clamp(300px, var(--site-width), var(--max-site-width));
 
     .wp-block-column {
         margin:0 2vw 0 0;
@@ -713,9 +713,14 @@ button, .button, .wp-block-button__link {
     margin: clamp(50px, 15vh, 200px) auto clamp(30px, 10vh, 150px) auto;
 }
 
+.wp-block-media-text {
+    margin: clamp(20px, 8vh, 100px) auto;
+    width: clamp(300px, var(--site-width), var(--max-site-width));
+}
+
 
 .wp-block-image {
-    width:calc(var(--site-width) - 20vw);    
+    width: clamp(300px, var(--site-width), var(--max-site-width));    
     margin: clamp(20px, 8vh, 100px) auto;
 
     @include phone {
@@ -727,7 +732,7 @@ button, .button, .wp-block-button__link {
 
     .wp-block-group {
         margin:0 auto;
-        width: clamp(300px, 60%, 1200px);
+        width: clamp(300px, 60%, var(--max-site-width));
     }
 
     .wp-block-image {
@@ -745,7 +750,7 @@ button, .button, .wp-block-button__link {
 
     .page_header {
         margin: clamp(40px, 10vh, 120px) auto 10px auto;
-        width: clamp(300px, var(--site-width), 1200px);
+        width: clamp(300px, var(--site-width), var(--max-site-width));
         
         &:after {
             content:'';
@@ -761,7 +766,7 @@ button, .button, .wp-block-button__link {
 
 .schema-faq {
     margin: clamp(20px, 8vh, 100px) auto;
-    width: clamp(300px, var(--site-width), 1200px);
+    width: clamp(300px, var(--site-width), var(--max-site-width));
 
     background:$white;
     padding:clamp(30px, 6vw, 100px);
@@ -815,7 +820,9 @@ button, .button, .wp-block-button__link {
 /* ------------- Columns ------------ */
 
 .wp-block-columns {    
-    display:flex;    
+    display:flex;
+    align-items: center;  
+    justify-content: center;   
 
     @include phone {
         flex-direction: column;
@@ -824,6 +831,7 @@ button, .button, .wp-block-button__link {
 
     .wp-block-column {
         width:50%;
+
 
         @include phone{
             width:100%;
@@ -913,6 +921,52 @@ button, .button, .wp-block-button__link {
         }
     }    
 }
+
+.wp-block-media-text {
+    display:flex;
+    align-items: center;  
+
+    .wp-block-media-text__media {
+        width:50%;
+        overflow:hidden;
+        border-radius:5px;
+        margin-right:clamp(10px, 1.5vw, 50px);
+        height:100%;        
+
+        img {
+            width:100%;
+        }
+
+    }
+
+    .wp-block-media-text__content {
+        width:50%;
+        margin-left:clamp(10px, 1.5vw, 50px);
+
+
+        .wp-block-buttons {
+            margin:50px 0;
+            display:block;
+        }
+        
+    }
+
+}
+
+.wp-block-media-text.has-media-on-the-right {
+    flex-direction:row-reverse;
+
+    .wp-block-media-text__media { 
+        margin-left:clamp(10px, 1.5vw, 50px);
+        margin-right:0;
+    }
+
+    .wp-block-media-text__content {
+        margin-right:clamp(10px, 1.5vw, 50px);
+        margin-left:0;
+    }
+}
+
 
 
 /* ------------- Quotes ------------ */
@@ -1009,7 +1063,7 @@ blockquote.wp-block-quote {
         .button {
             margin-top:20px;
             margin-bottom:30px;
-            background:$dark !important;
+            background:$action !important;
             color:$white !important;
             transition: background-color .5s ease, color .5s ease;
 
@@ -1187,7 +1241,7 @@ blockquote.wp-block-quote {
 
         .post {
             margin:clamp(20px, 8vh, 100px) auto;
-            width:clamp(300px, var(--site-width), 1200px);
+            width:clamp(300px, var(--site-width), var(--max-site-width));
             display:flex;
                     
             &:nth-child(even) {
@@ -1243,12 +1297,12 @@ blockquote.wp-block-quote {
             }
     
             .text {
-                width:clamp(300px, 50%, 1200px);
+                width:clamp(300px, 50%, var(--max-site-width));
               
             }
     
             .image {
-                width:clamp(300px, 50%, 1200px);
+                width:clamp(300px, 50%, var(--max-site-width));
     
                 img {
                     width:100%;
