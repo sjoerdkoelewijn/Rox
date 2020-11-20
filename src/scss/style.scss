@@ -1336,6 +1336,37 @@ blockquote.wp-block-quote {
 
 } 
 
+.wp-block-columns.logos {
+    display:flex;
+    flex-wrap: wrap;
+
+    margin: clamp(20px, 4vh, 100px) auto;
+
+    .wp-block-column {
+        width:16.66667%;
+    } 
+
+    @include phone {
+        flex-direction: row;
+
+        .wp-block-column {
+            width:50%;
+        } 
+    }
+    
+    .wp-block-column {
+        margin:0;
+    }
+
+    .wp-block-image {
+        width:100%;
+        height:auto;
+        margin:0;
+    }
+
+
+}
+
 
 /* ------------- Reusable Gutenberg Blocks ----------------------------------------------------------------------------------------------------------- */
 
