@@ -7,8 +7,8 @@ $white:#ffffff;
 
 $color:#69E8A3;
 $bgcolor:#EAF3F3;
-$actioncolor:#FFED65;
-$action:#F53F16;
+$yellow:#FFED65;
+$orange:#F53F16;
 
 $box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
 $text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
@@ -146,7 +146,7 @@ button, .button, .wp-block-button__link {
 
 .wp-block-button.orange {
   .wp-block-button__link {
-    background:$actioncolor;
+    background:$yellow;
     color:$white;
     transition: background-color .5s ease, color .5s ease;
 
