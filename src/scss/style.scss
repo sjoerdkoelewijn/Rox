@@ -1254,6 +1254,11 @@ blockquote.wp-block-quote {
 
     p {
         font-size:calc(var(--large-p) * 1.1); 
+
+        @include phone {
+            font-size:var(--large-p);
+        }
+
     }
 
     ul {
@@ -1263,6 +1268,10 @@ blockquote.wp-block-quote {
         li {
             margin:10px 0;
             font-size:calc(var(--large-p) * 1.1);
+
+            @include phone {
+                font-size:var(--large-p);
+            }
 
             &:before {
                 content: '';
