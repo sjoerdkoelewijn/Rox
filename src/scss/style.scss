@@ -1368,6 +1368,56 @@ blockquote.wp-block-quote {
 }
 
 
+
+/* ------------- Stappenplan Section ------------ */
+
+.stappenplan {
+
+    .wp-block-group {
+        width:100%;
+        padding:0 0 40px clamp(30px, 10vw, 100px);
+        margin:0 0 0 2vw;
+
+        border-left:3px solid $dark;
+
+        h3 {
+            margin:8px 0 12px 0;
+        }
+    
+        h4 {
+            color:$color;
+            margin:0;
+            line-height: 100%;            
+
+            &:before {
+                content:'';
+                width:30px;
+                height:30px;
+                display:block;
+                margin:0 0 0 calc((clamp(30px, 10vw, 100px) + 16px) * -1);
+                position:absolute;
+                border:3px solid $dark;
+                background:$light;
+                border-radius:100%;
+            }
+        }
+
+        &:first-of-type {
+            padding-top:0px;
+        }
+
+        &:last-of-type {
+            border:0;
+            
+            margin-left:calc(2vw + 3px);
+        }
+    }
+
+
+
+}
+
+
 /* ------------- Reusable Gutenberg Blocks ----------------------------------------------------------------------------------------------------------- */
 
 /* ------------- Yoast Schema FAQ Section ------------ */
@@ -1420,6 +1470,7 @@ blockquote.wp-block-quote {
     }
 
 }   
+
 
 /* ------------- USPs Section ------------ */
 
