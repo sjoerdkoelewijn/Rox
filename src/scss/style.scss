@@ -694,6 +694,10 @@ button, .button, .wp-block-button__link {
                     color:$dark;
                     background:$white;
                     transition: background-color .5s ease, color .5s ease;
+
+                    &:before {
+                        background-image: url(../../images/svg/phoneIcon.svg);
+                    }
                 }
             }
         }
@@ -1372,7 +1376,7 @@ blockquote.wp-block-quote {
 /* ------------- Stappenplan Section ------------ */
 
 .stappenplan {
-
+    
     .wp-block-group {
         width:100%;
         padding:0 0 40px clamp(30px, 10vw, 100px);
@@ -1414,6 +1418,13 @@ blockquote.wp-block-quote {
     }
 
 
+}
+
+.wp-block-column {
+    
+    .stappenplan {
+        width:100%;
+    }
 
 }
 
