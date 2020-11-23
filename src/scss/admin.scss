@@ -1,5 +1,10 @@
 @import "variables/breakpoints";
+@import "variables/colors";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&display=swap');
+
+.block-editor-block-list__layout, .editor-post-title {
+    color:$dark;
+}
 
 .wp-block {
     
@@ -14,6 +19,10 @@
     border:1px solid rgba(66,88,99,.2);
     background-color:#fafafa;
     border-radius:5px;
+
+    .wp-block-group {
+        border:1px solid rgba(66,88,99,.1);
+     }
 }
 
 .wp-block-columns {
@@ -21,6 +30,12 @@
     border:1px solid rgba(66,88,99,.2);
     background-color:#fdfdfd;
     border-radius:5px;
+
+    .wp-block-column{
+        border:1px solid rgba(66,88,99,.1);
+        padding:10px;
+        border-radius:5px;
+    }
 }
 
 .editor-styles-wrapper {
@@ -31,5 +46,38 @@
     h1, h2, h3, h4, h5, h6 {
         text-transform:uppercase;
         font-weight:900;
+        color:$dark;
+    }
+}
+
+.stappenplan {
+
+    .wp-block-group {
+
+        h3 {
+            margin:8px 0 12px 0;
+            color:$dark;
+        }
+    
+        h4 {
+            color:$color;
+            margin:0;
+            line-height: 100%;            
+
+        }
+
+    }
+
+}
+
+.wp-block-yoast-faq-block {
+    padding:30px;
+    background:#fafafa;
+    border-radius:5px;
+    border:1px solid rgba(66,88,99,.2);
+
+    .schema-faq-section {
+        border-radius:5px;
+        border:1px solid rgba(66,88,99,.1);
     }
 }
