@@ -727,130 +727,6 @@ button, .button, .wp-block-button__link {
 
 /* ------------- Gutenberg Blocks ----------------------------------------------------------------------------------------------------------- */
 
-/* ------------- General Spacing ------------ */
-
-.wp-block-group {
-    margin: clamp(20px, 8vh, 100px) auto;
-    width: clamp(300px, var(--site-width), var(--max-site-width));
-}
-
-.wp-block-group.background_white {
-    width:100vw;
-    padding:clamp(70px, 5vh, 200px) 0 clamp(70px, 5vh, 200px) 0;
-}
-
-.wp-block-columns {
-    margin: clamp(20px, 8vh, 100px) auto;
-    width: clamp(300px, var(--site-width), var(--max-site-width));
-
-    .wp-block-column {
-        margin:0 2vw 0 0;
-
-        @include phone {
-            margin:0;
-        }
-
-        h2 {
-            margin-top:20px;
-        }
-    }
-
-    .wp-block-column ~ .wp-block-column {
-        margin:0 0 0 2vw;
-
-        @include phone {
-            margin:0;
-        }
-    }
-
-    .wp-block-group {
-        width:auto;
-        
-    }
-
-}
-
-.wp-block-columns.usp {
-    margin: clamp(20px, 4vh, 100px) auto;
-}
-
-.wp-block-columns.intro {
-    margin: clamp(50px, 15vh, 200px) auto clamp(30px, 10vh, 150px) auto;
-}
-
-.wp-block-media-text {
-    margin: clamp(20px, 8vh, 100px) auto;
-    width: clamp(300px, var(--site-width), var(--max-site-width));
-}
-
-
-.wp-block-image {
-    width: clamp(300px, var(--site-width), var(--max-site-width));    
-    margin: clamp(20px, 8vh, 100px) auto;
-
-    @include phone {
-        width:100%;        
-    }
-}
-
-.wp-block-cover {
-    margin: clamp(20px, 8vh, 100px) auto;
-    width: clamp(300px, var(--site-width), var(--max-site-width));
-}
-
-.wp-block-group {
-
-    .wp-block-group {
-        margin:0 auto;
-        width: clamp(300px, 60%, var(--max-site-width));
-    }
-
-    .wp-block-image {
-        width:100%;
-        margin:0 auto;
-
-        @include phone {
-            width:var(--site-width);
-        }
-    }
-
-}
-
-.content {
-
-    .page_header {
-        margin: clamp(40px, 10vh, 120px) auto 10px auto;
-        width: clamp(300px, var(--site-width), var(--max-site-width));
-        
-        &:after {
-            content:'';
-            background:$color;
-            width:75px;
-            height:10px;
-            display:block;
-            margin-top:20px;
-        }
-    }
-
-}
-
-.schema-faq {
-    margin: clamp(20px, 8vh, 100px) auto;
-    width: clamp(300px, var(--site-width), var(--max-site-width));
-
-    background:$white;
-    padding:clamp(30px, 6vw, 100px);
-    border-radius:5px;
-}
-
-.faq {
-    .schema-faq {
-        width:auto;
-        margin:0;
-        padding:0;
-    }
-}
-
 
 /* ------------- Images ------------ */
 
@@ -960,29 +836,18 @@ button, .button, .wp-block-button__link {
 
         li {
             font-size:var(--large-p);
-            margin:5px 0;
+            font-weight: 300;
+            margin:10px 0 0 23px;
+            padding-left:10px;
+
+            list-style-image:url('../../images/svg/checkIcon.svg');
+            list-style-position: outside;
+            
         }
     }
 
     ul {
         list-style: none;
-
-        li {
-
-            &:before {
-                content: '';
-                display: inline-block;
-                height: 1em;
-                width: 1em;
-                margin-right:10px;
-                background:url('../../images/svg/checkIcon.svg');
-                background-position: left 5px;
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-            
-        }
-
     }
 
     ol {
@@ -1429,12 +1294,13 @@ blockquote.wp-block-quote {
 }
 
 
-/* ------------- Reusable Gutenberg Blocks ----------------------------------------------------------------------------------------------------------- */
-
 /* ------------- Yoast Schema FAQ Section ------------ */
 
 
 .schema-faq {
+    background:$white;
+    padding:clamp(30px, 6vw, 100px);
+    border-radius:5px;
 
     .schema-faq-question {
         text-transform: uppercase;
@@ -1481,6 +1347,25 @@ blockquote.wp-block-quote {
     }
 
 }   
+
+/* ------------- Rankmath Schema FAQ Section ------------ */
+
+.rank-math-block {
+    background:$white;
+    padding:clamp(30px, 6vw, 100px);
+    border-radius:5px;
+
+    .rank-math-question  {
+        text-transform: uppercase;
+        font-weight:800;
+        font-size:var(--medium-subtitle);
+        margin-bottom:20px;
+        display:block;
+    }
+
+}
+
+
 
 
 /* ------------- USPs Section ------------ */

@@ -38,3 +38,125 @@
 
 }
 
+
+/* ------------- General Gutenberg Block Spacing ------------ */
+
+.wp-block-group {
+    margin: clamp(20px, 8vh, 100px) auto;
+    width: clamp(300px, var(--site-width), var(--max-site-width));
+}
+
+.wp-block-group.background_white {
+    width:100vw;
+    padding:clamp(70px, 5vh, 200px) 0 clamp(70px, 5vh, 200px) 0;
+}
+
+.wp-block-columns {
+    margin: clamp(20px, 8vh, 100px) auto;
+    width: clamp(300px, var(--site-width), var(--max-site-width));
+
+    .wp-block-column {
+        margin:0 2vw 0 0;
+
+        @include phone {
+            margin:0;
+        }
+
+        h2 {
+            margin-top:20px;
+        }
+    }
+
+    .wp-block-column ~ .wp-block-column {
+        margin:0 0 0 2vw;
+
+        @include phone {
+            margin:0;
+        }
+    }
+
+    .wp-block-group {
+        width:auto;
+        
+    }
+
+}
+
+.wp-block-columns.usp {
+    margin: clamp(20px, 4vh, 100px) auto;
+}
+
+.wp-block-columns.intro {
+    margin: clamp(50px, 15vh, 200px) auto clamp(30px, 10vh, 150px) auto;
+}
+
+.wp-block-media-text {
+    margin: clamp(20px, 8vh, 100px) auto;
+    width: clamp(300px, var(--site-width), var(--max-site-width));
+}
+
+
+.wp-block-image {
+    width: clamp(300px, var(--site-width), var(--max-site-width));    
+    margin: clamp(20px, 8vh, 100px) auto;
+
+    @include phone {
+        width:100%;        
+    }
+}
+
+.wp-block-cover {
+    margin: clamp(20px, 8vh, 100px) auto;
+    width: clamp(300px, var(--site-width), var(--max-site-width));
+}
+
+.wp-block-group {
+
+    .wp-block-group {
+        margin:0 auto;
+        width: clamp(300px, 60%, var(--max-site-width));
+    }
+
+    .wp-block-image {
+        width:100%;
+        margin:0 auto;
+
+        @include phone {
+            width:var(--site-width);
+        }
+    }
+
+}
+
+.content {
+
+    .page_header {
+        margin: clamp(40px, 10vh, 120px) auto 10px auto;
+        width: clamp(300px, var(--site-width), var(--max-site-width));
+        
+        &:after {
+            content:'';
+            background:$color;
+            width:75px;
+            height:10px;
+            display:block;
+            margin-top:20px;
+        }
+    }
+
+}
+
+.schema-faq, .rank-math-block {
+    margin: clamp(20px, 8vh, 100px) auto;
+    width: clamp(300px, var(--site-width), var(--max-site-width));
+
+}
+
+.faq {
+    .schema-faq {
+        width:auto;
+        margin:0;
+        padding:0;
+    }
+}
+
