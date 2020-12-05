@@ -1,29 +1,61 @@
 <?php get_header(); ?>
 
-<h1>This is archive.php</h1>
+    <h1 class="archive_header">
+        <?php the_archive_title(); ?>
+    </h1>
 
-<?php echo get_the_category_list(); ?>
+    <div class="content">          
 
-	<?php if ( have_posts() ) : ?>
+        <?php if ( have_posts() ) : ?>	
+                        
+            <?php while ( have_posts() ) : the_post(); ?>
+            
+                <article class="post">
+                
+                    <div class="text">
+                
+                        <a title="<?php the_title(); ?>" class="header" href="<?php the_permalink(); ?>">
+                            <h2>
+                                <?php the_title(); ?>
+                            </h2>
+                        </a>                    
+                        
+                        <?php echo apply_filters( 'the_content', wp_trim_words( strip_tags( $post->post_content ), 55 ) ); ?>
+              
+                        <a title="<?php the_title(); ?>" class="read_more_btn" href="<?php the_permalink(); ?>">
+                            Verder lezen
+                        </a>
+                        
+                    </div>
 
-		<?php the_archive_title( ); ?>	
+                    <a title="<?php the_title(); ?>" class="image" href="<?php the_permalink(); ?>">
+                        <?php the_post_thumbnail('large'); ?>
+                    </a>
 
-	<?php endif; ?>
+                </article>
+                
+            <?php endwhile; ?>
 
-	<?php if ( have_posts() ) : ?>	
-					
-		<?php while ( have_posts() ) : the_post(); ?>		
-		
-			<a href="<?php the_permalink(); ?>">
-				<?php the_title(); ?>
-			</a>												
-			
-		<?php endwhile; ?>
+            <?php // the_posts_pagination(); ?>
 
-	<?php else : ?>
+            <div class="next_posts_btn_wrap">
+                <?php next_posts_link('Volgende pagina'); ?>
+            </div>
 
-		'No content'
+        <?php else : ?>
 
-	<?php endif; ?>   
+            <div class="content">   
 
+                'No content'
+
+            </div>
+            
+        <?php endif; ?>   
+    
+    </div>
+ 
 <?php get_footer();
+
+
+
+
