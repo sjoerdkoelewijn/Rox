@@ -538,9 +538,9 @@ button, .button, .wp-block-button__link {
             //all: unset;
             transition-duration:0s;
             transition-delay: 0s;
-            max-width:auto;
-            min-width:auto;
-            min-height:auto;
+            max-width:none;
+            min-width:initial;
+            min-height:initial;
             display:block;            
             position:relative;
             opacity:1;
