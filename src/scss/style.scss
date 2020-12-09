@@ -535,7 +535,18 @@ button, .button, .wp-block-button__link {
         }    
     
         ul.sub-menu {        
-            all: unset;
+            //all: unset;
+            transition-duration:0s;
+            transition-delay: 0s;
+            max-width:auto;
+            min-width:auto;
+            min-height:auto;
+            display:block;            
+            position:relative;
+            opacity:1;
+            visibility: visible;
+            background:none;
+            box-shadow:none;
                      
             &:before {
                 display:none;
@@ -1694,9 +1705,9 @@ div.wpforms-container-full {
             }
 
             ul.sub-menu {
-                all: unset;
                 transition-duration:0s;
                 transition-delay: 0s;
+                display:block;
                                
 
                 li.menu-item {
