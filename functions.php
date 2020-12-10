@@ -1,7 +1,7 @@
 <?php
 
 include 'functions/custom-post-types.php';
-//include 'functions/gutenberg-blocks.php';
+include 'functions/gutenberg-blocks.php';
 include 'functions/enqueue.php';
 include 'functions/menus.php';
 

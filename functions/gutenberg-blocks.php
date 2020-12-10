@@ -22,39 +22,15 @@ function my_acf_init() {
 	if( function_exists('acf_register_block') ) {
 		
 		acf_register_block(array(
-			'name'				=> 'hero',
-			'title'				=> __('Hero Block'),
-			'description'		=> __('The hero block for the top of the page'),
+			'name'				=> 'related-posts',
+			'title'				=> __('Related Post'),
+			'description'		=> __('Voeg related posts toe in de content'),
 			'render_callback'	=> 'sk_acf_block_render_callback',
 			'category'			=> 'common',
-			'icon'				=> 'laptop',
+			'icon'				=> 'admin-links',
 			'mode'				=> 'edit', // start in edit mode
-			'keywords'			=> array( 'hero', 'image' ),
-		));
-
-		acf_register_block(array(
-			'name'				=> 'diensten',
-			'title'				=> __('Diensten Slider'),
-			'description'		=> __('Slider met diensten blokjes'),
-			'render_callback'	=> 'sk_acf_block_render_callback',
-			'category'			=> 'common',
-			'icon'				=> 'laptop',
-			'mode'				=> 'edit', // start in edit mode
-			'keywords'			=> array( 'diensten'),
-		));
-
-		acf_register_block(array(
-			'name'				=> 'persoon',
-			'title'				=> __('Persoon Block'),
-			'description'		=> __('Block met contact gegevens'),
-			'render_callback'	=> 'sk_acf_block_render_callback',
-			'category'			=> 'common',
-			'icon'				=> 'laptop',
-			'mode'				=> 'edit', // start in edit mode
-			'keywords'			=> array( 'contact', 'persoon'),
-		));
+			'keywords'			=> array( 'link', 'related', 'post', 'page' ),
+		));		
 
 	}
 }
-
-
