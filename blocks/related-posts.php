@@ -19,13 +19,25 @@ $id = 'hero-' . $block['id'];
                     
                     <a class="related_post" title="<?php echo get_the_title( $post->ID ); ?>" href="<?php echo get_permalink( $post->ID ); ?>">
 
-                        <?php $image = get_the_post_thumbnail_url($post->ID, 'thumbnail');
+                        <?php 
+                        
+                        $image = get_the_post_thumbnail_url($post->ID, 'thumbnail');
+                        $anchor = get_sub_field('anchor');
+
                         if( $image ): ?> 
                             <img class="featured_image" alt="<?php echo get_the_title( $post->ID ) ?>" src="<?php echo $image; ?>" >
-                        <?php endif; ?>   
-
+                        <?php endif; ?>
+                        
                         <span class="text">
-                            <?php echo get_the_title( $post->ID ); ?>
+                            <?php if( $anchor ) { ?>
+                                
+                                <?php echo $anchor; ?>
+
+                            <?php } else { ?> 
+
+                                <?php echo get_the_title( $post->ID ); ?>                                
+
+                            <?php }; ?>
                         </span>
                     </a>
 
