@@ -40,14 +40,16 @@
 
 .editor-styles-wrapper {
     font-family: 'Poppins', sans-serif !important;
+    
 }
 
 .editor-styles-wrapper  {
     h1, h2, h3, h4, h5, h6 {
-        text-transform:uppercase;
+        //text-transform:uppercase;
         font-weight:900;
         color:$dark;
     }
+   
 }
 
 .stappenplan {
