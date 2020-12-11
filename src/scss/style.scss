@@ -1310,6 +1310,42 @@ blockquote.wp-block-quote {
 
 } 
 
+.witbox {
+    background:$white;
+    border-radius: 5px;
+    padding:clamp(30px, 9vw, 200px);
+}
+
+.kosten {
+
+    .wp-block-columns {
+
+        .wp-block-column {
+            margin: 0;
+            padding-top:130px; 
+            background-position: center 5px;
+            background-repeat: no-repeat;
+
+            width:33%;
+        }
+
+        .uurtarief {            
+            background-image: url(../../images/svg/stopwatch.svg);
+            
+        }
+
+        .budget {
+            background-image: url(../../images/svg/budget.svg);
+        }
+
+        .website {
+            background-image: url(../../images/svg/desktop.svg);
+        }
+
+    }
+
+}
+
 .wp-block-columns.logos {
     display:flex;
     flex-wrap: wrap;
@@ -1432,7 +1468,7 @@ blockquote.wp-block-quote {
             font-size: 110%;
 
         }
-        
+
     }
 
 }
@@ -1590,9 +1626,7 @@ blockquote.wp-block-quote {
                 }
             }
         }
-
     } 
-
 }
 
 .next_posts_btn_wrap {            
@@ -1691,8 +1725,6 @@ div.wpforms-container-full {
 
 
 /* ------------- Footer ----------------------------------------------------------------------------------------------------------- */
-
-
 
 .footer {
     background:$dark;    
