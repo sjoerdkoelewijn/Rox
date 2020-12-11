@@ -1313,7 +1313,11 @@ blockquote.wp-block-quote {
 .witbox {
     background:$white;
     border-radius: 5px;
-    padding:clamp(30px, 9vw, 200px);
+    padding:clamp(10px, 8vw, 200px) clamp(10px, 10vw, 250px);
+
+    .wp-block-columns {
+        width:100%;
+    }
 }
 
 .kosten {
@@ -1326,11 +1330,29 @@ blockquote.wp-block-quote {
             background-position: center 5px;
             background-repeat: no-repeat;
 
-            width:33%;
+            width:30%;
+
+            @include phone {
+                width:100%;
+                margin:20px 0;
+            }
+
+            h3 {
+                font-size:calc(var(--medium-subtitle) * 1.05 );
+                margin:5px;
+                font-weight:900;
+            }
+
+            h3 ~ h3 {
+                color:$color;
+                font-size:calc(var(--medium-subtitle) * 1.15 );
+                font-weight:800;                
+            }
         }
 
         .uurtarief {            
             background-image: url(../../images/svg/stopwatch.svg);
+            margin-right:3%;
             
         }
 
@@ -1340,6 +1362,7 @@ blockquote.wp-block-quote {
 
         .website {
             background-image: url(../../images/svg/desktop.svg);
+            margin-left:3%;
         }
 
     }
