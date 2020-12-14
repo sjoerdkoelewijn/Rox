@@ -401,7 +401,7 @@ button, .button, .wp-block-button__link {
 
 .main_menu_wrap {
 
-    .menu-item-has-children {
+    .menu-item-has-children{
         z-index:20;
         background:url(../../images/svg/caretIcon.svg) no-repeat;
         background-position: right center;
@@ -437,15 +437,7 @@ button, .button, .wp-block-button__link {
                 visibility:visible;
             }
         }
-        
-        .menu-item-has-children {
-            
-            &:hover {
-                ul.sub-menu {
-                    opacity:0;
-                }
-            }
-        }
+       
     
     }
     
@@ -586,7 +578,7 @@ button, .button, .wp-block-button__link {
             display:block;            
             position:relative;
             opacity:1;
-            visibility: visible;
+            visibility: unset;
             background:none;
             box-shadow:none;
                      
