@@ -115,6 +115,10 @@
     .wp-block-group {
         margin:0 auto;
         width: clamp(300px, 60%, var(--max-site-width));
+
+        @include phone {
+            width:auto;
+        }
     }
 
     .wp-block-image {

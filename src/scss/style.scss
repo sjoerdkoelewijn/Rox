@@ -863,6 +863,10 @@ button, .button, .wp-block-button__link {
 
 .has-text-align-center {
     text-align:center;
+
+    @include phone {
+        text-align:left;
+    }
 }
 
 .has-text-align-right {
@@ -1352,6 +1356,12 @@ blockquote.wp-block-quote {
     .wp-block-columns {
         width:100%;
     }
+
+    @include phone {
+        margin:0 0 0 -20px;
+        width:calc(100% + 20px);
+    }
+
 }
 
 .kosten {
@@ -1363,12 +1373,17 @@ blockquote.wp-block-quote {
             padding-top:130px; 
             background-position: center 5px;
             background-repeat: no-repeat;
-
             width:30%;
 
             @include phone {
                 width:100%;
                 margin:20px 0;
+
+                .has-text-align-center {
+            
+                    text-align:center;
+                    
+                }
             }
 
             h3 {
@@ -1561,6 +1576,18 @@ blockquote.wp-block-quote {
 
     h3 {
         margin:0 0 10px 0;
+    }
+
+
+    .wp-block-column {
+        @include phone {
+         
+            .has-text-align-center {
+        
+                text-align:center;
+                
+            }
+        }
     }
 
     .usp_1 {
