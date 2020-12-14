@@ -436,7 +436,16 @@ button, .button, .wp-block-button__link {
                 transition-delay: 0s, 0s;
                 visibility:visible;
             }
-        }    
+        }
+        
+        .menu-item-has-children {
+            
+            &:hover {
+                ul.sub-menu {
+                    opacity:0;
+                }
+            }
+        }
     
     }
     

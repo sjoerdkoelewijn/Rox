@@ -133,3 +133,19 @@ function getCookie(c_name) {
     return "";
 }
 
+
+//  Animate all wp-block-group blocks 
+
+const blockgroups = document.querySelectorAll('.wp-block-group, .wp-block-columns, .rank-math-block, .wp-block-cover, .page_header');
+
+observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.intersectionRatio > 0) {
+      entry.target.classList.add('fade-in-up');
+    } 
+  });
+});
+
+blockgroups.forEach(blockgroup => {
+  observer.observe(blockgroup);
+});

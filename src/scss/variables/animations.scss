@@ -8,25 +8,33 @@
         display:flex;
     }
   }
+  
+  .fade-in-up {
+    animation: fadeInUp .5s linear;
+  }
 
-
-
+  .hero.fade-in-up {
+    animation:none;
+  }
+ 
+  
   @keyframes fadeInUp {
     from {
       opacity: 0;
       transform: translate3d(0, 100%, 0);
     }
+
+    50% {
+      opacity:.2;
+      transform: translate3d(0, 60%, 0);
+    }
   
-    to {
+    100% {
       opacity: 1;
       transform: translate3d(0, 0, 0);
     }
   }
-  
-  .fadeInUp {
-    animation-name: fadeInUp;
-  }
-
+ 
   @keyframes bounceInRight {
     from,
     60%,
