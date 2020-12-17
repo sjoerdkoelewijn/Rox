@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
     <h1 class="archive_header">
-        Kennisbank
+        <?php single_cat_title(); ?>
     </h1>
 
     <div class="content">          

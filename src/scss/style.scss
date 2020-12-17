@@ -1619,7 +1619,185 @@ blockquote.wp-block-quote {
 
 /* ------------- Kennisbank Archive ----------------------------------------------------------------------------------------------------------- */
 
-.post-type-archive {
+.post-type-archive-kennisbank {
+
+    .header_wrap {
+        width: clamp(300px, var(--site-width), var(--max-site-width));
+        margin: clamp(20px, 20vh, 300px) auto 0 auto;        
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;       
+
+        .archive_header {
+            margin-bottom:15px;
+        }
+
+        .archive_subheader {
+            text-transform:capitalize;
+            color:$color;
+            margin:0;
+        }
+
+        .column {
+            width:100%;
+            margin-bottom:clamp(20px, 8vh, 100px);
+
+            @include desktop-s-up {
+                width:calc(50% - clamp(10px, 4vh, 50px));
+            }
+
+        }
+
+        .column.left {
+            margin-bottom:clamp(10px, 4vh, 50px);
+
+            @include desktop-s-up {
+                margin-bottom:clamp(20px, 8vh, 100px);
+            }
+        }
+
+        .groenbox {
+            background-color: $color;
+            padding:clamp(20px, 6vh, 100px) clamp(30px, 4vw, 120px);
+            border-radius:5px;
+            box-shadow: $box-shadow;
+
+            a {
+                font-weight:800;
+                text-decoration:none;
+
+                &:hover {
+                    color:$dark;
+                }
+            }
+
+            .header {
+                font-size:125%;
+                margin-bottom:15px;
+                display:block;
+            }
+        }
+    }
+
+    .content {
+        width: clamp(300px, var(--site-width), var(--max-site-width));
+        margin: 0 auto clamp(20px, 8vh, 100px) auto;     
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;      
+
+        .kennisbank_category {
+            background-color:$white;
+            box-shadow: $box-shadow;
+            padding:50px;
+            border-radius:5px;
+
+            width:100%;
+            margin-bottom:clamp(20px, 8vh, 100px);
+
+            @include desktop-s-up {
+                width:calc(50% - clamp(10px, 4vh, 50px));
+            }
+
+            .category_header {
+                margin-bottom:10px;
+            }
+
+            .category_description {
+                font-size:calc(var(--large-p) * .9);
+                margin-bottom:0;
+            }
+
+            .category_link {
+                font-size:calc(var(--large-p) * .95);
+                font-weight:600;
+                text-decoration:none;
+                margin-top:20px;
+                display:block;
+                line-height: 24px;
+                display:flex;
+                flex-wrap: wrap;
+
+                &:before {
+                    content:'';
+                    mask: url('../../images/svg/roundArrowRight.svg');
+                    background:$color;
+                    display:block;
+                    width:24px;
+                    height:24px;
+                    margin-right:10px;
+                    transition: background-color .5s ease, color .5s ease;
+                }
+
+                .category_link_name {
+                    text-transform: lowercase;
+                }
+            }
+
+            hr {
+                border: 1px solid $bgcolor;
+                border-radius: 2px;
+                margin:30px 0;
+            }
+
+            .post_link_wrap {
+                margin-bottom:20px;
+                display:flex;
+                text-decoration:none;
+                transition:none;
+
+                &:hover {
+                    color:$dark;
+                    
+                    h3 {
+                        color:$color;
+                        transition: color .5s ease;
+                    }
+                }
+
+                .image {
+                    flex:0 0 110px;
+                    min-height:110px;
+                    margin-right:20px;
+                    border-radius:5px;
+                    background-position: center center;
+                    background-repeat:no-repeat;
+
+                    @include desktop-s {
+                        display:none;
+                    }
+                }
+
+                .image.default {
+                    background:$bgcolor;
+                }
+
+                .text {
+                    flex:1;
+
+                    h3 {
+                        text-transform: initial;
+                        font-size:var(--large-p);
+                        margin-bottom:5px;
+                        transition: color .5s ease;
+                    }
+
+                    p {
+                        font-size:calc(var(--large-p) * .9);
+                        margin:0;
+                    }
+
+                }
+            }
+
+        }
+    }   
+
+}
+
+.tax-kennisbank_categories {
 
     .archive_header {
         text-align: center;

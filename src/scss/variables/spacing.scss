@@ -49,6 +49,11 @@
 .wp-block-group.background_white {
     width:100vw;
     padding:clamp(70px, 5vh, 200px) 0 clamp(70px, 5vh, 200px) 0;
+
+    .wp-block-group {
+        width: auto;
+    }
+
 }
 
 .wp-block-columns {
@@ -131,6 +136,8 @@
     }
 
 }
+
+.wp-block-group {}
 
 .content {
 
