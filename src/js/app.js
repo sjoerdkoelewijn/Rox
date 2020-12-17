@@ -136,7 +136,7 @@ function getCookie(c_name) {
 
 //  Animate all wp-block-group blocks 
 
-const blockgroups = document.querySelectorAll('.wp-block-group, .wp-block-columns, .rank-math-block, .wp-block-cover, .page_header');
+const blockgroups = document.querySelectorAll('.wp-block-group, .header_wrap, .kennisbank_category, .wp-block-columns,.content .post, .rank-math-block, .wp-block-cover, .page_header');
 
 observer = new IntersectionObserver((entries) => {
 
