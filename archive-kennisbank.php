@@ -42,7 +42,7 @@
         $cat_terms = get_terms(
             array('kennisbank_categories'),
             array(
-                    'hide_empty'    => false,
+                    'hide_empty'    => true,
                     'orderby'       => 'name',
                     'order'         => 'ASC'
                 )
