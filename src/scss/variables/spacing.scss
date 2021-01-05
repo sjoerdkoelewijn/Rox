@@ -76,6 +76,12 @@
             margin:6vh 0;
             justify-content:flex-start;
 
+            @include tablet { 
+                flex-direction: column;
+                align-items:flex-start;
+                margin:0;
+            }
+
             .wp-block-column {
                 margin:0 30px 0 0;
                 width:auto;
@@ -87,6 +93,10 @@
     
                 .wp-block-buttons {
                     margin:0;
+
+                    @include tablet {
+                        margin:3vh 0;
+                    }
 
                     @include phone {
                         margin:5vh 0;
