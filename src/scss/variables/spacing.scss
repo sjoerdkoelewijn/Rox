@@ -70,6 +70,31 @@
         h2 {
             margin-top:20px;
         }
+
+        .wp-block-columns {
+            width:auto;
+            margin:6vh 0;
+            justify-content:flex-start;
+
+            .wp-block-column {
+                margin:0 30px 0 0;
+                width:auto;
+
+                @include phone {
+                    margin:0;
+                    width:100%;
+                }
+    
+                .wp-block-buttons {
+                    margin:0;
+
+                    @include phone {
+                        margin:5vh 0;
+                        width:100%;
+                    }
+                }
+            }
+        }
     }
 
     .wp-block-column ~ .wp-block-column {
@@ -87,6 +112,7 @@
 
 }
 
+
 .wp-block-columns.usp {
     margin: clamp(20px, 4vh, 100px) auto;
 }
@@ -94,6 +120,7 @@
 .wp-block-columns.intro {
     margin: clamp(50px, 15vh, 200px) auto clamp(30px, 10vh, 150px) auto;
 }
+
 
 .wp-block-media-text {
     margin: clamp(20px, 8vh, 100px) auto;
