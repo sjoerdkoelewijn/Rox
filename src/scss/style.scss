@@ -2108,13 +2108,17 @@ div.wpforms-container-full {
 .page-template-page-contact {
 
     .content {
-        margin-top:10vh;
+        margin-top:15vh;
     }
 
     h1 {
         font-size:var(--large-title);
         line-height:120%;
         font-weight:900;
+
+        @include phone {
+            font-size:var(--x-large-title);
+        }
     }
 
     p {
