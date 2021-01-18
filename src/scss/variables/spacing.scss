@@ -43,7 +43,7 @@
 
 .wp-block-group {
     margin: clamp(20px, 8vh, 100px) auto;
-    width: clamp(300px, var(--site-width), var(--max-site-width));
+    width: clamp(320px, var(--site-width), var(--max-site-width));
 }
 
 .wp-block-group.background_white {
@@ -58,7 +58,7 @@
 
 .wp-block-columns {
     margin: clamp(20px, 8vh, 100px) auto;
-    width: clamp(300px, var(--site-width), var(--max-site-width));
+    width: clamp(320px, var(--site-width), var(--max-site-width));
 
     .wp-block-column {
         margin:0 2vw 0 0;
@@ -134,12 +134,12 @@
 
 .wp-block-media-text {
     margin: clamp(20px, 8vh, 100px) auto;
-    width: clamp(300px, var(--site-width), var(--max-site-width));
+    width: clamp(320px, var(--site-width), var(--max-site-width));
 }
 
 
 .wp-block-image {
-    width: clamp(300px, var(--site-width), var(--max-site-width));    
+    width: clamp(320px, var(--site-width), var(--max-site-width));    
     margin: clamp(20px, 8vh, 100px) auto;
 
     @include phone {
@@ -149,14 +149,14 @@
 
 .wp-block-cover {
     margin: clamp(20px, 8vh, 100px) auto;
-    width: clamp(300px, var(--site-width), var(--max-site-width));
+    width: clamp(320px, var(--site-width), var(--max-site-width));
 }
 
 .wp-block-group {
 
     .wp-block-group {
         margin:0 auto;
-        width: clamp(300px, 60%, var(--max-site-width));
+        width: clamp(320px, 60%, var(--max-site-width));
 
         @include phone {
             width:auto;
@@ -174,13 +174,12 @@
 
 }
 
-.wp-block-group {}
 
 .content {
 
     .page_header {
         margin: clamp(40px, 10vh, 120px) auto 10px auto;
-        width: clamp(300px, var(--site-width), var(--max-site-width));
+        width: clamp(320px, var(--site-width), var(--max-site-width));
         
         &:after {
             content:'';
@@ -196,7 +195,7 @@
 
 .schema-faq, .rank-math-block {
     margin: clamp(20px, 8vh, 100px) auto;
-    width: clamp(300px, var(--site-width), var(--max-site-width));
+    width: clamp(320px, var(--site-width), var(--max-site-width));
 
 }
 

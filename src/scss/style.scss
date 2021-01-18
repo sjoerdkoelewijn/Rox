@@ -1153,7 +1153,7 @@ button, .button, .wp-block-button__link {
         z-index:2;
         font-size:var(--x-large-title);
         color:$white;
-        width:clamp(300px, 60vw, 800px);
+        width:clamp(320px, 60vw, 800px);
         line-height:120%;
 
         @include phone {
@@ -1582,6 +1582,8 @@ blockquote.wp-block-quote {
     background:$white;
     padding:clamp(30px, 6vw, 100px);
     border-radius:5px;
+    width:100%;
+
 
     .rank-math-question  {
         text-transform: uppercase;
@@ -1652,7 +1654,7 @@ blockquote.wp-block-quote {
 .post-type-archive-kennisbank {
 
     .header_wrap {
-        width: clamp(300px, var(--site-width), var(--max-site-width));
+        width: clamp(320px, var(--site-width), var(--max-site-width));
         margin: clamp(20px, 20vh, 300px) auto 0 auto;        
         
         display: flex;
@@ -1711,7 +1713,7 @@ blockquote.wp-block-quote {
     }
 
     .content {
-        width: clamp(300px, var(--site-width), var(--max-site-width));
+        width: clamp(320px, var(--site-width), var(--max-site-width));
         margin: 0 auto clamp(20px, 8vh, 100px) auto;     
 
         display: flex;
@@ -1849,7 +1851,7 @@ blockquote.wp-block-quote {
 
         .post {
             margin:clamp(20px, 8vh, 100px) auto;
-            width:clamp(300px, var(--site-width), var(--max-site-width));
+            width:clamp(320px, var(--site-width), var(--max-site-width));
             display:flex;
                     
             &:nth-child(even) {
@@ -1905,12 +1907,12 @@ blockquote.wp-block-quote {
             }
     
             .text {
-                width:clamp(300px, 50%, var(--max-site-width));
+                width:clamp(320px, 50%, var(--max-site-width));
               
             }
     
             .image {
-                width:clamp(300px, 50%, var(--max-site-width));
+                width:clamp(320px, 50%, var(--max-site-width));
     
                 img {
                     width:100%;
@@ -1964,7 +1966,7 @@ blockquote.wp-block-quote {
 .single-kennisbank {
     
     .hero_image {
-        width: clamp(300px, var(--site-width), var(--max-site-width));
+        width: clamp(320px, var(--site-width), var(--max-site-width));
         margin:clamp(20px, 8vh, 100px)  auto clamp(20px, 8vh, 100px) auto;    
 
         border-radius:5px;
@@ -1973,7 +1975,7 @@ blockquote.wp-block-quote {
 
     // Reduced width for single kennisbank items
     .page_header, .content_inner_wrap, .wp-block-group, .rank-math-breadcrumb {
-        width: clamp(300px, calc(var(--site-width) * .75), calc(var(--max-site-width) * .75));
+        width: clamp(320px, calc(var(--site-width) * .75), calc(var(--max-site-width) * .75));
         margin:0 auto;
     }
 
@@ -1999,7 +2001,7 @@ blockquote.wp-block-quote {
     }
 
     .related_posts {
-        width: clamp(300px, var(--site-width), var(--max-site-width));
+        width: clamp(320px, var(--site-width), var(--max-site-width));
         margin:clamp(20px, 8vh, 100px)  auto clamp(20px, 8vh, 100px) auto;
 
         display:flex;
@@ -2011,6 +2013,11 @@ blockquote.wp-block-quote {
             width:31%;
             text-decoration: none;
             border-radius: 5px;
+
+            @include phone {
+                width:100%;
+                margin-bottom:30px;
+            }
             
             .image {
                 width:100%;
