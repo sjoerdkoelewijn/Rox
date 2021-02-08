@@ -125,7 +125,7 @@
 
 .wp-block-columns.usp {
     margin: clamp(20px, 4vh, 100px) auto;
-    width: clamp(320px, var(--site-width), var(--max-site-width));
+    width: clamp(320px, var(--site-width), 100%);
 }
 
 .wp-block-columns.intro {
