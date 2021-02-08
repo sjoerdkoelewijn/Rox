@@ -43,7 +43,7 @@
 
 .wp-block-group {
     margin: clamp(20px, 8vh, 100px) auto;
-    width: clamp(320px, var(--site-width), 100%);
+    width: clamp(320px, var(--site-width), var(--max-site-width));
 }
 
 .wp-block-group.background_white {
@@ -58,7 +58,7 @@
 
 .wp-block-columns {
     margin: clamp(20px, 8vh, 100px) auto;
-    width: clamp(320px, var(--site-width), 100%);
+    width: clamp(320px, var(--site-width), var(--max-site-width));
 
     .wp-block-column {
         margin:0 2vw 0 0;
@@ -125,6 +125,7 @@
 
 .wp-block-columns.usp {
     margin: clamp(20px, 4vh, 100px) auto;
+    width: clamp(320px, var(--site-width), var(--max-site-width));
 }
 
 .wp-block-columns.intro {
