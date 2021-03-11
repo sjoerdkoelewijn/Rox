@@ -29,7 +29,7 @@
 
         <?php if ( is_front_page() && has_post_thumbnail() ) { 
             
-            echo '<img alt="Roxtar Online Marketing Bureau Amsterdam" loading="lazy" class="bg_hero_img" src="'. esc_attr( $attachment_image ) .'" />';
+            echo '<img alt="Roxtar Online Marketing Bureau Amsterdam" class="bg_hero_img" src="'. esc_attr( $attachment_image ) .'" />';
             
         } ?>
 
