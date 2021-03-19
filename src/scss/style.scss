@@ -2029,8 +2029,8 @@ blockquote.wp-block-quote {
     }
 
     .wp-block-columns.call2action {
-        width: clamp(320px, var(--site-width), var(--max-site-width));
-        margin: clamp(20px, 8vh, 100px) auto clamp(20px, 8vh, 100px) auto;
+        width: clamp(320px, calc(var(--site-width) * .75), calc(var(--max-site-width) * .75));
+        margin:0 auto;
     }
 
     .rank-math-breadcrumb {
