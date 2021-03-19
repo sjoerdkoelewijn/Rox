@@ -1387,6 +1387,43 @@ blockquote.wp-block-quote {
 
 } 
 
+.cta-form {
+    h2 {
+        font-size:var(--large-title);
+        line-height:120%;
+        font-weight:900;
+    }
+
+    p {
+        font-size:calc(var(--large-p) * 1.1); 
+
+        @include phone {
+            font-size:var(--large-p);
+        }
+
+    }
+
+    ul {
+        
+        margin:0 0 30px 0;
+
+        li {
+            font-size:calc(var(--large-p) * 1.1);
+            margin:10px 0 0 23px;
+            padding-left:10px;
+            list-style-image:url('../../images/svg/checkIcon.svg');
+            list-style-position: outside;
+
+            @include phone {
+                font-size:var(--large-p);
+            }
+      
+            
+        }
+
+    }
+}
+
 .witbox {
     background:$white;
     border-radius: 5px;
@@ -1974,6 +2011,7 @@ blockquote.wp-block-quote {
 .single-kennisbank {
     
     .hero_image {
+
         img {
             width: clamp(320px, var(--site-width), var(--max-site-width));
             margin:clamp(20px, 8vh, 100px)  auto clamp(20px, 8vh, 100px) auto;    
@@ -1981,12 +2019,18 @@ blockquote.wp-block-quote {
             border-radius:5px;
             max-height:40vh;
         }        
+
     }
 
     // Reduced width for single kennisbank items
     .page_header, .content_inner_wrap, .wp-block-group, .rank-math-breadcrumb {
         width: clamp(320px, calc(var(--site-width) * .75), calc(var(--max-site-width) * .75));
         margin:0 auto;
+    }
+
+    .wp-block-group.cta-form {
+        width: clamp(320px, var(--site-width), var(--max-site-width));
+        margin: clamp(20px, 8vh, 100px) auto clamp(20px, 8vh, 100px) auto;
     }
 
     .rank-math-breadcrumb {
@@ -2084,6 +2128,10 @@ div.wpforms-container-full {
         max-width:100% !important;
         color:$dark !important;
     }
+}
+
+.wpforms-error-container {
+    display:none;
 }
 
 
