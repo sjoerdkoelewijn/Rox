@@ -1771,6 +1771,10 @@ blockquote.wp-block-quote {
             padding:50px;
             border-radius:5px;
 
+            @include phone {
+                padding:20px;
+            }
+
             width:100%;
             margin-bottom:clamp(20px, 8vh, 100px);
 
