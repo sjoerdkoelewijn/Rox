@@ -26,6 +26,13 @@ $header-font:'Poppins', sans-serif;
     --medium-btn:1.1rem;
     --small-btn:0.9rem;
 
+    @include phone {
+        --x-large-p:1.3rem;
+        --large-p:1.1rem;
+        --medium-p:.9rem;
+        --small-p:.7rem;
+    }
+
 }
 
 html {
