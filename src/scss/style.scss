@@ -1974,11 +1974,13 @@ blockquote.wp-block-quote {
 .single-kennisbank {
     
     .hero_image {
-        width: clamp(320px, var(--site-width), var(--max-site-width));
-        margin:clamp(20px, 8vh, 100px)  auto clamp(20px, 8vh, 100px) auto;    
+        img {
+            width: clamp(320px, var(--site-width), var(--max-site-width));
+            margin:clamp(20px, 8vh, 100px)  auto clamp(20px, 8vh, 100px) auto;    
 
-        border-radius:5px;
-        max-height:40vh;
+            border-radius:5px;
+            max-height:40vh;
+        }        
     }
 
     // Reduced width for single kennisbank items
