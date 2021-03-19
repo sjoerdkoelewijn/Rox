@@ -1829,6 +1829,10 @@ blockquote.wp-block-quote {
                 text-decoration:none;
                 transition:none;
 
+                @include phone {
+                    flex-direction: column;
+                }
+
                 &:hover {
                     color:$dark;
                     
@@ -1848,6 +1852,11 @@ blockquote.wp-block-quote {
 
                     @include desktop-s {
                         display:none;
+                    }
+
+                    @include phone {
+                        background-size: cover;
+                        margin-bottom:20px;
                     }
                 }
 
