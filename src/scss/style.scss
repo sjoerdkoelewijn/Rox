@@ -1387,7 +1387,7 @@ blockquote.wp-block-quote {
 
 } 
 
-.cta-form {
+.call2action {
     h2 {
         font-size:var(--large-title);
         line-height:120%;
@@ -2028,7 +2028,7 @@ blockquote.wp-block-quote {
         margin:0 auto;
     }
 
-    .wp-block-group.cta-form {
+    .wp-block-columns.call2action {
         width: clamp(320px, var(--site-width), var(--max-site-width));
         margin: clamp(20px, 8vh, 100px) auto clamp(20px, 8vh, 100px) auto;
     }
