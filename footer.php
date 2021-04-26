@@ -36,7 +36,7 @@
 				<div class="left">
 					
 					<p class="text">
-						&copy; 2020 ROXTAR Online Marketing 
+						&copy; <?php echo date("Y"); ?> ROXTAR Online Marketing 
 					</p>
 				
 				</div>
